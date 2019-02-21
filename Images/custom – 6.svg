@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="230" viewBox="0 0 340 230">
+  <defs>
+    <clipPath id="clip-custom_6">
+      <rect width="340" height="230"/>
+    </clipPath>
+  </defs>
+  <g id="custom_6" data-name="custom – 6" clip-path="url(#clip-custom_6)">
+    <path id="Path_20" data-name="Path 20" d="M1754.172,32.438l-81.253,81.253,81.253,81.253" transform="translate(-1640)" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+    <path id="Path_21" data-name="Path 21" d="M1672.919,113.691h254.5" transform="translate(-1640)" fill="none" stroke="red" stroke-linecap="round" stroke-width="30"/>
+  </g>
+</svg>
