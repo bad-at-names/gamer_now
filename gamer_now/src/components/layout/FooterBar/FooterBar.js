@@ -9,8 +9,6 @@ class FootBar extends Component {
             <div>
                 <div className="no-break"></div>
                 <div className="no-break">Hello, User</div>
-                <div className="no-break">{SignIn}</div>
-                <div className="no-break">{SignUp}</div>
             </div>
         )    
     }

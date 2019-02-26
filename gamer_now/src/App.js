@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar/Navbar';
 import FootBar from './components/layout/FooterBar/FooterBar';
-import SignedIn from './components/layout/SignedIn';
-import SignedOut from './components/layout/SignedOut';
+import SignedIn from './components/layout/FooterBar/SignedIn';
+import SignedOut from './components/layout/FooterBar/SignedOut';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 
