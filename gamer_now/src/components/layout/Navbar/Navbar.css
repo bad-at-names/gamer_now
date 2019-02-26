@@ -1,0 +1,47 @@
+.container{
+    background-color: #696773;
+    text-align: center;
+}
+
+@media (max-width: 1920px) {
+    #gamernow_navlogo{
+        width: 230px;
+    }
+}
+
+@media (max-width: 1700px) {
+    #gamernow_navlogo{
+        width: 220px;
+    }
+}
+
+@media (max-width: 1500px) {
+    #gamernow_navlogo{
+        width: 210px;
+    }
+}
+
+@media (max-width: 1300px) {
+    #gamernow_navlogo{
+        width: 170px;
+    }
+}
+
+@media (max-width: 1100px) {
+    #gamernow_navlogo{
+        width: 156px;
+    }
+}
+
+@media (max-width: 900px) {
+    #gamernow_navlogo{
+        width: 143px;
+    }
+}
+
+@media (max-width: 900px) {
+    #gamernow_navlogo{
+        width: 130px;
+    }
+}
+
