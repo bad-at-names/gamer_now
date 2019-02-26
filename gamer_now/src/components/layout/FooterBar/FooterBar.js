@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import SignIn from '../../../components/auth/SignIn';
 import SignUp from '../../../components/auth/SignUp';
+import './FooterBar.css';
 
-class FootBar extends Component {
+class FooterBar extends Component {
     render() {
         return(
-            <div>
+            <div id="footerbar">
                 <div className="no-break"></div>
                 <div className="no-break">Hello, User</div>
             </div>
@@ -14,4 +15,4 @@ class FootBar extends Component {
     }
 }
 
-export default FootBar;
+export default FooterBar;

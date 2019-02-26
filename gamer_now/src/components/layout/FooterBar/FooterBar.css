@@ -1,3 +1,39 @@
 .no-break{
     display: inline;
 }
+
+#footerbar{
+    background-color: #696773;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 1920px) {
+    #footerbar{
+        height: 50px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1100px) {
+    #footerbar{
+        height: 30px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    #footerbar{
+        height: 25px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 700px) {
+    #footerbar{
+        height: 20px;
+        font-size: 15px;
+    }
+}

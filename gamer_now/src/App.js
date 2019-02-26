@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navbar from './components/layout/Navbar/Navbar';
-import FootBar from './components/layout/FooterBar/FooterBar';
+import NavBar from './components/layout/NavBar/NavBar';
+import FooterBar from './components/layout/FooterBar/FooterBar';
 import SignedIn from './components/layout/FooterBar/SignedIn';
 import SignedOut from './components/layout/FooterBar/SignedOut';
 import SignIn from './components/auth/SignIn';
@@ -12,12 +12,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
+          <NavBar />
           <Switch>
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
           </Switch>
-          <FootBar />
+          <FooterBar />
         </div>
       </BrowserRouter>
     );
