@@ -4,8 +4,8 @@ import NavBar from './components/layout/NavBar/NavBar';
 import FooterBar from './components/layout/FooterBar/FooterBar';
 import SignedIn from './components/layout/FooterBar/SignedIn';
 import SignedOut from './components/layout/FooterBar/SignedOut';
-import SignIn from './components/auth/SignIn';
-import SignUp from './components/auth/SignUp';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
 
 class App extends Component {
   render() {
@@ -14,8 +14,8 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Switch>
-            <Route path='/signin' component={SignIn} />
-            <Route path='/signup' component={SignUp} />
+            <Route path='/login' component={Login} />
+            <Route path="/register" component={Register} />
           </Switch>
           <FooterBar />
         </div>

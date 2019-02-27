@@ -1,15 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
-class SignUp extends Component {
+class Login extends Component {
   state = {
-    email: '',
-    password: ''
+    email: null,
+    password: null
   }
+
   handleChange = (e) => {
       this.setState({
           [e.target.id]: e.target.value
       })
   }
+
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
@@ -17,18 +20,19 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-            <h5>Sign up</h5>
+        <form onSubmit={this.handleSubmitIn}>
+            <h5>Sign in</h5>
             <div className="input-field">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" onChange={this.handleChange}/>
+                <input type="email" id="email" onChange={this.handleChangeIn}/>
             </div>
             <div className="input-field">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" onChange={this.handleChange}/>
+                <input type="password" id="password" onChange={this.handleChangeIn}/>
             </div>
+            <div id="re-direct"><Link to = './register'>Don't have an account?</Link></div>
             <div className="input-field">
-                <button>Sign Up!</button>
+                <button>Login</button>
             </div>
         </form>
       </div>
@@ -36,4 +40,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp
+export default Login;

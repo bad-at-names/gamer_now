@@ -2,6 +2,11 @@
     display: inline;
 }
 
+#signs{
+    position: fixed;
+    right: 60px;
+}
+
 #footerbar{
     background-color: #696773;
     text-align: center;

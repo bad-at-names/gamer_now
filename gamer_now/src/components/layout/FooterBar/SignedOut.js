@@ -10,4 +10,4 @@ const SignedOut = () => {
     )
 }
 
-export default SignedOut
+export default SignedOut;

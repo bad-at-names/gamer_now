@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SignedIn = () => {
     return (
-        <ul>
+        <div>
             <li><Link to='/'>Log Out</Link></li>
-            <li><Link to='/'>Profile></Link></li>
-        </ul>
+            <li><Link to='/'>Profile</Link></li>
+        </div>
     )
 }
 
-export default SignedIn
+export default SignedIn;
