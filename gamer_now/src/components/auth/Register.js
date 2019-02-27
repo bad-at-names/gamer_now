@@ -19,9 +19,9 @@ class Register extends Component {
     }
     render() {
         return (
-            <div>
+            <div id='Box'>
                 <form onSubmit={this.handleSubmitUp}>
-                    <h5>Sign up</h5>
+                    <h3>Register</h3>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" onChange={this.handleChangeUp}/>
