@@ -16,26 +16,31 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    if (this.state.email == null)
+      console.log("Email not entered");
+    if (this.state.password == null) {
+      console.log("Password not entered");
+      console.log(this.state);
+    }
   }
   render() {
     return (
       <div id = "Box">
-        <form onSubmit={this.handleSubmitIn}>
+        <form onSubmit={this.handleSubmit}>
             <h3>Sign in</h3>
             <div className="input-field">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" onChange={this.handleChangeIn}/>
+                <input type="email" id="email" required={ true } onChange={ this.handleChange }/>
             </div>
             <div className="input-field">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" onChange={this.handleChangeIn}/>
+                <input type="password" id="password" required = { true } onChange={ this.handleChange }/>
             </div>
             <div id="re-direct">
               <Link to = './register'>Don't have an account?</Link>
             </div>
             <div className="input-field">
-                <button>Login</button>
+                <button className = "log-buttons">Login</button>
             </div>
         </form>
       </div>
