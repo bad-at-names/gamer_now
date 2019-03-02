@@ -20,8 +20,8 @@ class Login extends Component {
       console.log("Email not entered");
     if (this.state.password == null) {
       console.log("Password not entered");
-      console.log(this.state);
     }
+    console.log(this.state);
   }
   render() {
     return (
