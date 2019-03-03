@@ -8,6 +8,8 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import './App.css';
 
+//hi im eddie
+
 class App extends Component {
   render() {
     return (
