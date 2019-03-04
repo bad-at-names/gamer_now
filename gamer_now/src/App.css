@@ -4,12 +4,17 @@
   font-family: "Montserrat", sans-serif;
 }
 
-input[type=text], select {
+.enpinput{
   width: 100%;
-  padding: 12px 20px;
+  padding: 5px;
   margin: 8px 0;
-  display: inline-block;
+  display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  opacity: 0.7;
+}
+
+.enpinput:active{
+  opacity: 1.0;
 }

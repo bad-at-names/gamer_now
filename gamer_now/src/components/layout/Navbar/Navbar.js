@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import GAMERnow from '../../../main_assets/GAMERnow.svg';
+import Arrow from '../../../main_assets/arrow.svg';
 
 const NavBar = () => {
     return (
@@ -9,8 +10,8 @@ const NavBar = () => {
             <div id = "nav-logos">
                 <Link to='/' className="logo">    
                     <img src = { GAMERnow } alt="" id="gamernow_navlogo"/>
-                    for 
                 </Link>
+                <img src = { Arrow } alt='' id= "arrow"/>
             </div>
         </div>
     )

@@ -1,0 +1,9 @@
+.mp-container {
+    width: 100%;
+    text-align: center;
+    grid-template-columns: auto auto auto;
+
+}
+.title-tags{
+    display: inline-block;
+}

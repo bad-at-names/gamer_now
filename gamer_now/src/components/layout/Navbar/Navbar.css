@@ -1,6 +1,6 @@
 #nav-div {
-    background-color: #696773;
-    position: fixed;
+    background-color: #532C36;
+    position: sticky;
     top: 0;
     width: 100%;
 }
@@ -10,6 +10,10 @@
     left: 2%;
 }
 
+#arrow{
+    width: 4%;
+}
+
 #gamernow_navlogo {
     width: 15%;
 }
@@ -17,5 +21,9 @@
 @media (max-width: 900px) {
     #gamernow_navlogo {
         width: 135px;
+    }
+
+    #arrow {
+        width: 35px;
     }
 }
