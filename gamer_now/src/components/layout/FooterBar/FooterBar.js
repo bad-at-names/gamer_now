@@ -6,8 +6,6 @@ class FooterBar extends Component {
     render() {
         return(
             <div id="footerbar">
-                <div className="no-break"></div>
-                <div className="no-break">Hello, User</div>
                 <div className="no-break" id="signs">
                     <button className = "log-buttons" onClick={this.clickHandlerSignIn}><Link to = './login'><span>Login</span></Link></button>
                     OR

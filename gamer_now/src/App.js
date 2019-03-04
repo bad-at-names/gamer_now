@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import NavBar from './components/layout/Navbar/Navbar';
+import NavBar from './components/layout/NavBar/NavBar';
 import FooterBar from './components/layout/FooterBar/FooterBar';
 import SignedIn from './components/layout/FooterBar/SignedIn';
 import SignedOut from './components/layout/FooterBar/SignedOut';

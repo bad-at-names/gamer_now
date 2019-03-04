@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './NavBar.css';
 import GAMERnow from '../../../main_assets/GAMERnow.svg';
 
-const Navbar = () => {
+const NavBar = () => {
     return (
-        <nav className="">
-            <div className="container">
-                <Link to='/' className="logo">
+        <div id="nav-div">
+            <div id = "nav-logos">
+                <Link to='/' className="logo">    
                     <img src = { GAMERnow } alt="" id="gamernow_navlogo"/>
+                    for 
                 </Link>
             </div>
-        </nav>
+        </div>
     )
 }
 
-export default Navbar;
+export default NavBar;
