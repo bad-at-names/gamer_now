@@ -28,14 +28,14 @@ class Login extends Component {
     return (
       <div id = "Box">
         <form onSubmit={this.handleSubmit}>
-            <h3>Sign in</h3>
+            <h3 className = "form-title">Sign in</h3>
             <div className="input-field">
                 <label htmlFor="email" >Email</label>
-                <input type="email" id="email" className= "enpinput" required={ true } onChange={ this.handleChange }/>
+                <input type="email" id="email" className= "enpinput" placeholder = "your@email.com" required={ true } onChange={ this.handleChange }/>
             </div>
             <div className="input-field">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" className= "enpinput" required = { true } onChange={ this.handleChange }/>
+                <input type="password" id="password" className= "enpinput" placeholder = "password" required = { true } onChange={ this.handleChange }/>
             </div>
             <div id="re-direct">
               <Link to = './register'>Don't have an account?</Link>

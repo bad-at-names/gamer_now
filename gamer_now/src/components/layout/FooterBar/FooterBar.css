@@ -11,17 +11,12 @@
     display: inline;
 }
 
-#signs{
-    position: fixed;
-    right: 60px;
-}
-
-.log-buttons {
+.footlogs{
     display: inline-block;
     border-radius: 4px;
-    background-color: #0e0372;
+    background-color: #D4F2DB;
     border: none;
-    color: #FFFFFF;
+    color: #532C36;
     text-align: center;
     font-size: 1.3em;
     padding: 0.2em;
@@ -29,6 +24,13 @@
     cursor: pointer;
     opacity: 0.7;
     height: 80x;
+
+}
+
+#signs{
+    position: fixed;
+    bottom: 6px;
+    right: 60px;
 }
 
 .log-buttons:hover{

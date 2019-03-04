@@ -7,9 +7,9 @@ class FooterBar extends Component {
         return(
             <div id="footerbar">
                 <div className="no-break" id="signs">
-                    <button className = "log-buttons" onClick={this.clickHandlerSignIn}><Link to = './login'><span>Login</span></Link></button>
-                    OR
-                    <button className = "log-buttons" onClick={this.clickHandlerSignUp}><Link to = './register'><span>Register</span></Link></button>
+                    <button className = "footlogs" onClick={this.clickHandlerSignIn}><Link to = './login'>Login</Link></button>
+                    <text> OR </text>
+                    <button className = "footlogs" onClick={this.clickHandlerSignUp}><Link to = './register'>Register</Link></button>
                 </div>       
             </div>
         )    
