@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import NavBar from './components/layout/NavBar/NavBar';
+import NavBar from './components/layout/Navbar/Navbar';
 import FooterBar from './components/layout/FooterBar/FooterBar';
 //import SignedIn from './components/layout/FooterBar/SignedIn';
 //import SignedOut from './components/layout/FooterBar/SignedOut';
@@ -11,8 +11,6 @@ import Coach from './components/Coach/Coach';
 import Forum from './components/Forum/Forum';
 import MainPage from './components/MainPage/MainPage';
 import './App.css';
-
-//hi im eddie
 
 class App extends Component {
   render() {
