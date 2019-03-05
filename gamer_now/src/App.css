@@ -4,12 +4,37 @@
   font-family: "Montserrat", sans-serif;
 }
 
-input[type=text], select {
+.enpinput{
   width: 100%;
-  padding: 12px 20px;
+  padding: 5px;
   margin: 8px 0;
-  display: inline-block;
+  display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  opacity: 0.7;
+}
+
+.enpinput:active{
+  opacity: 1.0;
+}
+
+.log-buttons {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #D4F2DB;
+  border: none;
+  color: #532C36;
+  text-align: center;
+  font-size: 1.3em;
+  padding: 0.2em;
+  transition: all 0.5s;
+  cursor: pointer;
+  opacity: 0.7;
+  height: 80x;
+}
+
+.form-title{
+  position: relative;
+  top: -10px;
 }

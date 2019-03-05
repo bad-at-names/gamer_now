@@ -24,15 +24,15 @@ class Register extends Component {
                     <h3>Register</h3>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder = "Your wonderful email" onChange={this.handleChange}/>
+                        <input type="email" id="email" className= "enpinput" placeholder = "your@email.com" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" placeholder = "What's the password?" onChange={this.handleChange}/>
+                        <input type="password" id="password" className= "enpinput" placeholder = "password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="repassword" placeholder = "I said. WHATS THE PASSWORD" onChange={this.handleChange}/>
+                        <input type="password" id="repassword" className= "enpinput" placeholder = "password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
                         <button className = "log-buttons">Register</button>

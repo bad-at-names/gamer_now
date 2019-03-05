@@ -8,4 +8,11 @@
     padding: 50px;
     border-radius: 20px;
     line-break: auto;
+    width: 20%;
+}
+
+@media(max-width: 1440px) {
+    #Box{
+        width: 400px;
+    }
 }
