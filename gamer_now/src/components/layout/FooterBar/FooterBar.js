@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import './FooterBar.css';
+import { connect } from 'react-redux'
 
 class FooterBar extends Component {
     render() {
@@ -18,4 +19,11 @@ class FooterBar extends Component {
     }
 }
 
-export default FooterBar;
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps)(FooterBar);

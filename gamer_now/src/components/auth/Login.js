@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './Login.css';
+import { connect } from 'react-redux'
+import { signIn } from '../../store/actions/authActions'
 
 class Login extends Component {
   state = {
-    email: null,
-    password: null
+    email: '',
+    password: ''
   }
 
   handleChange = (e) => {
@@ -16,14 +18,16 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.email == null)
-      console.log("Email not entered");
-    if (this.state.password == null) {
-      console.log("Password not entered");
-    }
-    console.log(this.state);
+    this.props.signIn(this.state);
+    //if (this.state.email == null)
+      //console.log("Email not entered");
+    //if (this.state.password == null) {
+      //console.log("Password not entered");
+    //}
+    //console.log(this.state);
   }
   render() {
+    const { authError } = this.props;
     return (
       <div id = "Box">
         <form onSubmit={this.handleSubmit}>
@@ -41,6 +45,9 @@ class Login extends Component {
             </div>
             <div className="input-field">
                 <button className = "log-buttons">Login</button>
+                <div>
+                  { authError ? <p>{authError}</p> : null } {/**this does not work, suppose to be a login failed message if authError is not null*/}
+                </div>
             </div>
         </form>
       </div>
@@ -48,4 +55,16 @@ class Login extends Component {
   }
 }
 
-export default Login;
+/* const mapStateToProps = (state) => {
+  return {
+    authError: state.auth.authError
+  }
+} */
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (creds) => dispatch(signIn(creds))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Login) /* This null is suppose to be mapStateToProps. results in typeError for authError*/
