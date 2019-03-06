@@ -24,7 +24,7 @@ class App extends Component {
             <Route path = '/fantasy' component = { Fantasy } />
             <Route path = '/forum' component = { Forum } />
             <Route path = '/coach' component = { Coach } />
-            <Route path = '' component = { MainPage } />
+            <Route path = '/' component = { MainPage } />
           </Switch>
           <FooterBar />
         </div>

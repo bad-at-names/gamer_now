@@ -19,12 +19,6 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.signIn(this.state);
-    //if (this.state.email == null)
-      //console.log("Email not entered");
-    //if (this.state.password == null) {
-      //console.log("Password not entered");
-    //}
-    //console.log(this.state);
   }
   
   render() {
@@ -47,7 +41,8 @@ class Login extends Component {
             <div className="input-field">
                 <button className = "log-buttons">Login</button>
                 <div>
-                  { authError ? <p>{authError}</p> : null } {/**this does not work, suppose to be a login failed message if authError is not null*/}
+                  { authError ? <p>{authError}</p> : null }
+                  {/* <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_02.png" width="109" height="66" border="0"></img> */}
                 </div>
             </div>
         </form>
@@ -56,11 +51,11 @@ class Login extends Component {
   }
 }
 
-/* const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     authError: state.auth.authError
   }
-} */
+}
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -68,4 +63,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(Login) /* This null is suppose to be mapStateToProps. results in typeError for authError*/
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
