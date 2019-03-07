@@ -4,10 +4,16 @@
     border-radius: 15px;
     color: #000000;
     padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: 30px;
     display: inline-block;
     box-shadow: 1px 1px #333333;
     opacity: 0.7;
+}
+
+.playername {
+    text-align: center;
 }
 
 .player-card:hover{
@@ -16,6 +22,5 @@
 }
 
 #card-table{
-    text-align: center;
-    align-content: center;
+
 }

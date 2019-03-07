@@ -6,8 +6,8 @@ import { signOut } from '../../../store/actions/authActions'
 const SignedIn = (props) => {
     return (
         <div>
-            <li><button onClick={props.signOut}>Log Out</button ></li>
-            <li><Link to='/'>Profile</Link></li>
+            <button className = "log-buttons" onClick={props.signOut}>Log Out</button >
+            <Link to='/'>Profile</Link>
         </div>
     )
 }

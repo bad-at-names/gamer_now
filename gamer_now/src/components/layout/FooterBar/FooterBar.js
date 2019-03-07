@@ -25,7 +25,7 @@ const FooterBar = (props) => {
     //console.log(auth);
     const links = auth.uid ? <SignedIn /> : <SignedOut />;
     return (
-        <div className="container">
+        <div id="footerbar">
             { links }
         </div>
     )
