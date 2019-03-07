@@ -5,6 +5,7 @@ import FooterBar from './components/layout/FooterBar/FooterBar';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Fantasy from './components/Fantasy/Fantasy';
+import PlayerInfo from './components/Fantasy/PlayerInfo';
 import Coach from './components/Coach/Coach';
 import Forum from './components/Forum/Forum';
 import MainPage from './components/MainPage/MainPage';
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path = '/fantasy' component = { Fantasy } />
             <Route path = '/forum' component = { Forum } />
             <Route path = '/coach' component = { Coach } />
+            <Route path = '/playerinfo' component = { PlayerInfo } />
             <Route path = '/' component = { MainPage } />
           </Switch>
           <FooterBar />

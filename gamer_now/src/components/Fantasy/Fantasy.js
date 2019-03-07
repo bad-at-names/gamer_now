@@ -1,20 +1,26 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
-//import { connect } from 'react-redux';
-//import { Redirect } from 'react-router-dom';
 
-class Fantasy extends Component {
-    // state = {
-    //     players: [ {playerId: 'asd', teamId: null, role: null, name: null, team: null,
-    //     eliminations_avg_per_10m: null} ]
-    // }
+class Fantasy extends Component { 
+    state = {
+        players: [ ]
+    }   
+    componentDidMount(){
+        axios.get('https://api.overwatchleague.com/stats/players')
+            .then( res => {
+                console.log(res);
+                this.setState({
+                    players: res.data.data
+                })
+            })
+    }
 
     render() {
-        //const { auth } = this.props;
-        //if (!auth.uid) return <Redirect to='/signin' />
         return(
             <div>
                 <h1>This is the page for the fantasy league.</h1>
+                <Link to = '/playerinfo'>PlayerInfo</Link>
             </div>
         )
     }
