@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './MainPage.css';
-import FantasyImg from './../../main_assets/fantasyimg.svg';
-import ForumImg from './../../main_assets/forumimg.png';
+import FantasyImg from './../../main_assets/fantasyimg.png';
+import ForumImg from './../../main_assets/forumimg.svg';
 import CoachImg from './../../main_assets/coachimg.svg';
 
 const MainPage = () => {
