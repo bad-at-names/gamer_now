@@ -4,11 +4,23 @@ import './Login.css';
 import { connect } from 'react-redux'
 import { signIn } from '../../store/actions/authActions'
 import { Redirect } from 'react-router-dom';
+import firebase from 'firebase';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 
 class Login extends Component {
   state = {
     email: '',
     password: ''
+  }
+
+  uiConfig = {
+    signInFlow: "popup",
+    signInOptions: [
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    ],
+    callbacks: {
+      signInSuccess: () => false
+    }
   }
 
   handleChange = (e) => {
@@ -43,6 +55,9 @@ class Login extends Component {
             </div>
             <div className="input-field">
                 <button className = "log-buttons">Login</button>
+                <StyledFirebaseAuth 
+                  uiConfig={ this.uiConfig }
+                  firebaseAuth={firebase.auth()} />
                 <div>
                   { authError ? <p>{authError}</p> : null }
                   {/* <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_02.png" width="109" height="66" border="0"></img> */}
