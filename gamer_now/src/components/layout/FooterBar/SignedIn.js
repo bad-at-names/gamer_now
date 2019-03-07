@@ -7,7 +7,7 @@ const SignedIn = (props) => {
     return (
         <div>
             <button className = "log-buttons" onClick={props.signOut}>Log Out</button >
-            <Link to='/'>Profile</Link>
+            <Link className = "log-buttons" to='/'>Profile</Link>
         </div>
     )
 }

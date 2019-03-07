@@ -37,5 +37,5 @@ export const signUp = (newUser) => {
       }).catch((err) => {
         dispatch({ type: 'SIGNUP_ERROR', err});
       });
-    }
   }
+}

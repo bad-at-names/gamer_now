@@ -22,19 +22,54 @@ class PlayerInfo extends Component {
         const { players } =this.state;
         const playerList = players.length ? (
             players.map(player => {
-                return (
-                    <div key = { player.playerId } className = "player-card">
-                        <div className = "player-info">
-                            <h1 className="playername">{ player.name }</h1>
-                            <p>Team: { player.team }</p>
-                            <p>Eliminations avg: { player.eliminations_avg_per_10m }</p>
-                            <p>Deaths avg: { player.deaths_avg_per_10m }</p>
-                            <p>Hero Damage avg: { player.hero_damage_avg_per_10m }</p>
-                            <p>Healing avg: { player.healing_avg_per_10m }</p>
-                            <p>Kills: { player.final_blows_avg_per_10m }</p>
+                if (player.role == "tank") {
+                    return (
+                        <div key = { player.playerId } className = "player-card-blue">
+                            <div className = "player-info">
+                                <h1 className="playername">{ player.name }</h1>
+                                <h2>Team: { player.team }</h2>
+                                <h2>Role: { player.role.toUpperCase() }</h2>
+                                <p>Eliminations avg: { player.eliminations_avg_per_10m.toFixed(2) }</p>
+                                <p>Deaths avg: { player.deaths_avg_per_10m.toFixed(2) }</p>
+                                <p>Hero Damage avg: { player.hero_damage_avg_per_10m.toFixed(2) }</p>
+                                <p>Healing avg: { player.healing_avg_per_10m.toFixed(2) }</p>
+                                <p>Kills: { player.final_blows_avg_per_10m.toFixed(2) }</p>
+                            </div>
                         </div>
-                    </div>
-                )
+                    )
+                }
+                else if (player.role == "offense") {
+                    return (
+                        <div key = { player.playerId } className = "player-card-red">
+                            <div className = "player-info">
+                                <h1 className="playername">{ player.name }</h1>
+                                <h2>Team: { player.team }</h2>
+                                <h2>Role: { player.role.toUpperCase() }</h2>
+                                <p>Eliminations avg: { player.eliminations_avg_per_10m.toFixed(2) }</p>
+                                <p>Deaths avg: { player.deaths_avg_per_10m.toFixed(2) }</p>
+                                <p>Hero Damage avg: { player.hero_damage_avg_per_10m.toFixed(2) }</p>
+                                <p>Healing avg: { player.healing_avg_per_10m.toFixed(2) }</p>
+                                <p>Kills: { player.final_blows_avg_per_10m.toFixed(2) }</p>
+                            </div>
+                        </div>
+                    )
+                }
+                else {
+                    return (
+                        <div key = { player.playerId } className = "player-card-green">
+                            <div className = "player-info">
+                                <h1 className="playername">{ player.name }</h1>
+                                <h2>Team: { player.team }</h2>
+                                <h2>Role: { player.role.toUpperCase() }</h2>
+                                <p>Eliminations avg: { player.eliminations_avg_per_10m.toFixed(2) }</p>
+                                <p>Deaths avg: { player.deaths_avg_per_10m.toFixed(2) }</p>
+                                <p>Hero Damage avg: { player.hero_damage_avg_per_10m.toFixed(2) }</p>
+                                <p>Healing avg: { player.healing_avg_per_10m.toFixed(2) }</p>
+                                <p>Kills: { player.final_blows_avg_per_10m.toFixed(2) }</p>
+                            </div>
+                        </div>
+                    )
+                }
             })
         ) : (
             <div> No player data</div>
