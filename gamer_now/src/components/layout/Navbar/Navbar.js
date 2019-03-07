@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import GAMERnow from '../../../main_assets/GAMERnow.svg';
+import GAMERnow from '../../../main_assets/GAMERnow.png';
 import Arrow from '../../../main_assets/arrow.svg';
 
 const NavBar = () => {
