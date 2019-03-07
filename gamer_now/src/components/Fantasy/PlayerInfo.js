@@ -17,6 +17,8 @@ class PlayerInfo extends Component {
     }
 
     render() {
+        //const { auth } = this.props;
+        //if (!auth.uid) return <Redirect to='/signin' />
         const { players } =this.state;
         const playerList = players.length ? (
             players.map(player => {
