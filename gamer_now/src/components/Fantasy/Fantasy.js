@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+//import { connect } from 'react-redux';
+//import { Redirect } from 'react-router-dom';
 
 class Fantasy extends Component {
     // state = {
@@ -8,6 +10,8 @@ class Fantasy extends Component {
     // }
 
     render() {
+        //const { auth } = this.props;
+        //if (!auth.uid) return <Redirect to='/signin' />
         return(
             <div>
                 <h1>This is the page for the fantasy league.</h1>
@@ -16,4 +20,12 @@ class Fantasy extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    //console.log(state);
+    return {
+        auth: state.firebase.auth
+    }
+}
+
+//export default connect(mapStateToProps)(Fantasy);
 export default Fantasy;

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './components/layout/Navbar/Navbar';
 import FooterBar from './components/layout/FooterBar/FooterBar';
-import SignedIn from './components/layout/FooterBar/SignedIn';
-import SignedOut from './components/layout/FooterBar/SignedOut';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Fantasy from './components/Fantasy/Fantasy';
