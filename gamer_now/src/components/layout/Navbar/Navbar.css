@@ -7,7 +7,7 @@
 }
 
 #nav-logos{
-    position: relative;
+    position: sticky;
     left: 2%;
 }
 
