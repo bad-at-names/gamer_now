@@ -148,3 +148,7 @@
     transform: rotateY(180deg);
     z-index: 1;
 }
+
+.team-logo {
+    width: 40%;
+}
