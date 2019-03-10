@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import './PlayerInfo.css';
-import Schedule from './Schedule';
 import ATL from '../../main_assets/overwatch_teams/ATL.svg';
 import BOS from '../../main_assets/overwatch_teams/BOS.svg';
 import CDH from '../../main_assets/overwatch_teams/CDH.svg';
