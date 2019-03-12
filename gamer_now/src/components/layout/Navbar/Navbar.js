@@ -8,7 +8,6 @@ const NavBar = () => {
     return (
         <div id="nav-div">
             <div id = "nav-logos">
-                
                 <Link to='/'>    
                     <img src = { GAMERnow } alt="" id="gamernow_navlogo"/>
                 </Link>

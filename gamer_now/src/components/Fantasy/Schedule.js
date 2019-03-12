@@ -1,36 +1,49 @@
 import React , { Component } from 'react';
 import axios from 'axios';
+import teamLogo from '../../main_assets/overwatch_teams/teamLogo'
 
 
 class Schedule extends Component {
     state = {
-        match1: [ ],
-        match2: [ ],
-        match3: [ ],
-        match4: [ ],
-        match5: [ ],
-        match6: [ ]
+        matches: [ ]
     }
     componentDidMount(){
         const OverwatchLeague = require('overwatchleague');
         const OWL = new OverwatchLeague();
         OWL.getConcludedWeek().then(response => {
             this.setState({
-                match1: response.data[8]
+                matches: response.data
             })
-            console.log(response.data[9]);
-            console.log(response.data[10]);
-            console.log(response.data[11]);
-            console.log(response.data[12]);
-            console.log(response.data[13]);
         })
     }
     render() {
-        // const { matches } = this.state;
-        // const matchList = matches.List
+        var a, b, ascore, bscore;
+        const { matches } = this.state;
+        const matchList = matches.length ? (
+            matches.map(match => {
+                a = match.competitors[0].abbreviatedName;
+                b = match.competitors[1].abbreviatedName;
+                ascore = match.scores[0].value;
+                bscore = match.scores[1].value;
+                return (
+                    <div>
+                        { match.id }
+                        <br></br>
+                        { console.log(match.scores) }
+                        <img src = { teamLogo(a) } alt ="" /> VS <img src = { teamLogo(b) } alt  ="" />
+                        <br></br>
+                        { ascore }   { bscore }
+                    </div>
+                )
+            })
+        ) : (
+            <div> Hey How you doing? </div>
+        )
+
         return(
             <div>
-                { console.log(this.state.match1) }
+                {/* {console.log(this.state)} */}
+                { matchList }
             </div>
         )
     }

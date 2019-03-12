@@ -29,7 +29,6 @@ class PlayerInfo extends Component {
     componentDidMount(){
         axios.get('https://api.overwatchleague.com/stats/players')
             .then( res => {
-                console.log(res);
                 this.setState({
                     players: res.data.data
                 })
