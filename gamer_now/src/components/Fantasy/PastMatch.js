@@ -1,9 +1,10 @@
 import React , { Component } from 'react';
 import axios from 'axios';
 import teamLogo from '../../main_assets/overwatch_teams/teamLogo'
+import './ScheduleBars.css';
 
 
-class Schedule extends Component {
+class PastMatch extends Component {
     state = {
         matches: [ ]
     }
@@ -26,18 +27,20 @@ class Schedule extends Component {
                 ascore = match.scores[0].value;
                 bscore = match.scores[1].value;
                 return (
-                    <div>
-                        { match.id }
-                        <br></br>
+                    <div className = "match-scores">
                         { console.log(match.scores) }
-                        <img src = { teamLogo(a) } alt ="" /> VS <img src = { teamLogo(b) } alt  ="" />
-                        <br></br>
-                        { ascore }   { bscore }
+                        <h3 className = "no-break">{ a } { ascore }</h3>
+                        <img src = { teamLogo(a) } alt = "" className = "schedule-teamlogo"/>
+                        <h3 className = "no-break">VS</h3>
+                        <img src = { teamLogo(b) } alt = "" className = "schedule-teamlogo"/>
+                        <h3 className = "no-break">{ bscore } { b }</h3>
                     </div>
                 )
             })
         ) : (
-            <div> Hey How you doing? </div>
+            <div>
+                <h3>Loading ... </h3>
+            </div>
         )
 
         return(
@@ -49,4 +52,4 @@ class Schedule extends Component {
     }
 }
 
-export default Schedule;
+export default PastMatch;

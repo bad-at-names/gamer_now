@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import Schedule from './Schedule';
+import PastMatch from './PastMatch';
 
 class Fantasy extends Component { 
 
@@ -9,7 +9,7 @@ class Fantasy extends Component {
             <div>
                 <h1>This is the page for the fantasy league.</h1>
                 <Link to = '/playerinfo'>PlayerInfo</Link>
-                <Schedule />
+                <PastMatch />
             </div>
         )
     }
