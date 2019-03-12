@@ -4,35 +4,34 @@ import teamLogo from '../../main_assets/overwatch_teams/teamLogo'
 import './ScheduleBars.css';
 
 
-class PastMatch extends Component {
+class UpcomingMatch extends Component {
     state = {
         matches: [ ]
     }
     componentDidMount(){
         const OverwatchLeague = require('overwatchleague');
         const OWL = new OverwatchLeague();
-        OWL.getConcludedWeek().then(response => {
+        OWL.getUpcomingWeek().then(response => {
             this.setState({
                 matches: response.data
             })
         })
     }
     render() {
-        var a, b, ascore, bscore;
+        var a, b;
         const { matches } = this.state;
         const matchList = matches.length ? (
             matches.map(match => {
+                console.log(match)
                 a = match.competitors[0].abbreviatedName;
                 b = match.competitors[1].abbreviatedName;
-                ascore = match.scores[0].value;
-                bscore = match.scores[1].value;
                 return (
                     <div className = "match-scores">
-                        <h3 className = "no-break">{ a } { ascore }</h3>
-                        <img src = { teamLogo(a) } alt = "" className = "schedule-teamlogo"/>
+                        <h3 className = "no-break">{ a }</h3>
+                        <img src = { teamLogo(a) } alt = { match.competitors[0].name } className = "schedule-teamlogo"/>
                         <h3 className = "no-break">VS</h3>
-                        <img src = { teamLogo(b) } alt = "" className = "schedule-teamlogo"/>
-                        <h3 className = "no-break">{ bscore } { b }</h3>
+                        <img src = { teamLogo(b) } alt = { match.competitors[1].name } className = "schedule-teamlogo"/>
+                        <h3 className = "no-break">{ b }</h3>
                     </div>
                 )
             })
@@ -41,14 +40,13 @@ class PastMatch extends Component {
                 <h3>Loading ... </h3>
             </div>
         )
-
-        return(
-            <div className = 'left-bar'>
-                {console.log(this.state)}
+    
+        return( 
+            <div className = 'right-bar'>
                 { matchList }
             </div>
         )
     }
 }
 
-export default PastMatch;
+export default UpcomingMatch;
