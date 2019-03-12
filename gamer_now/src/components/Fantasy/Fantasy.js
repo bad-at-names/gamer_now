@@ -1,26 +1,15 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Schedule from './Schedule';
 
 class Fantasy extends Component { 
-    state = {
-        players: [ ]
-    }   
-    componentDidMount(){
-        axios.get('https://api.overwatchleague.com/stats/players')
-            .then( res => {
-                console.log(res);
-                this.setState({
-                    players: res.data.data
-                })
-            })
-    }
 
     render() {
         return(
             <div>
                 <h1>This is the page for the fantasy league.</h1>
                 <Link to = '/playerinfo'>PlayerInfo</Link>
+                <Schedule />
             </div>
         )
     }

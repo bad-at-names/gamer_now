@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "firebase": "^5.8.5",
+    "overwatchleague": "^1.5.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-firebaseui": "^3.1.2",

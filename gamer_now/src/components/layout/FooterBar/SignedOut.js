@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const SignedOut = () => {
     return (
-        <ul>
-            <li><Link to='/register'>Sign Up</Link></li>
-            <li><Link to='/login'>Log In</Link></li>
-        </ul>
+        <div className = "log-box">
+            <Link className = "log-buttons" to='/register'>Register</Link>
+            <Link className = "log-buttons" to='/login'>Log In</Link>
+        </div>
     )
 }
 

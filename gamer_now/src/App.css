@@ -32,9 +32,15 @@
   cursor: pointer;
   opacity: 0.7;
   margin: 10px;
+  text-decoration: none;
 }
 
 .form-title{
   position: relative;
   top: -10px;
+}
+
+.log-box {
+  position: fixed;
+  right: 2%;
 }
