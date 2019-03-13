@@ -9,7 +9,7 @@ class Fantasy extends Component {
         return(
             <div>
                 <h1>This is the page for the fantasy league.</h1>
-                <Link to = '/playerinfo'>PlayerInfo</Link>
+                {/* <Link to = '/playerinfo'>PlayerInfo</Link> */}
                 {/* <PastMatch /> */}
                 <PastMatch />
                 <UpcomingMatch />

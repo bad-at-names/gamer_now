@@ -39,28 +39,28 @@ const teamLogo = (props) => {
                 return FLA;
                 break;
             case "GLA":
-            return GLA;
+                return GLA;
                 break;
             case "GZC":
-            return GZC;
+                return GZC;
                 break;
             case "HOU":
-            return HOU;
+                return HOU;
                 break;
             case "HZS":
-            return HZS;
+                return HZS;
                 break;
             case "LDN":
-            return LDN;
+                return LDN;
                 break;
             case "NYE":
-            return NYE;
+                return NYE;
                 break;
             case "PAR":
-            return PAR;
+                return PAR;
                 break;
             case "PHI":
-            return PHI;
+                return PHI;
                 break;
             case "SEO":
                 return SEO;
@@ -69,19 +69,19 @@ const teamLogo = (props) => {
                 return SFS;
                 break;
             case "SHD":
-            return SHD;
+                return SHD;
                 break;
             case "TOR":
-            return TOR;
+                return TOR;
                 break;
             case "VAL":
-            return VAL;
+                return VAL;
                 break;
             case "VAN":
-            return VAN;
+                return VAN;
                 break;
             default:
-            return WAS;
+                return WAS;
         }
 }
 
