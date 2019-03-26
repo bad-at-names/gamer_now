@@ -1,10 +1,24 @@
 .mp-container {
-    width: 100%;
-    text-align: center;
-    grid-template-columns: auto auto auto;
-
+    display: grid;
+    grid-template-rows: repeat(3, minmax(200px, 300px));
+    grid-row-gap: 30px;
+    padding-bottom: 50px;
 }
 
 .title-tags{
-    display: inline-block;
+    display: grid;
+    background-color: rgba(55,55,55,0.4);
+    margin: 30px 100px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.title-tags:hover{
+    background-color: rgba(55,55,55,0.7);
+}
+
+.title-tags>a{
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+    color: #ffffff;
 }

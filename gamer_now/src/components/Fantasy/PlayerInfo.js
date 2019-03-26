@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import './PlayerInfo.css';
-import PlayerCards from './playerCards';
+import './Fantasy.css';
+import PlayerCards from './playerCards/playerCards';
 
 class PlayerInfo extends Component { 
     state = {
@@ -27,7 +27,7 @@ class PlayerInfo extends Component {
                 )    
             })
         ) : (
-            <div> No player data</div>
+            <h2 className = "playername"> Loading ... </h2>
         )
         return(
             <div>

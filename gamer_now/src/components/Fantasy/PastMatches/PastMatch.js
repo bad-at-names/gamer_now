@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import axios from 'axios';
-import teamLogo from '../../main_assets/overwatch_teams/teamLogo'
-import './ScheduleBars.css';
+import teamLogo from '../../layout/Frequents/teamLogo';
+import '../Fantasy.css';
 
 
 class PastMatch extends Component {
@@ -38,12 +38,12 @@ class PastMatch extends Component {
             })
         ) : (
             <div>
-                <h3>Loading ... </h3>
+                <h3 className = "playername">Loading ... </h3>
             </div>
         )
 
         return(
-            <div className = 'left-bar'>
+            <div id = 'past-match'>
                 {console.log(this.state)}
                 { matchList }
             </div>

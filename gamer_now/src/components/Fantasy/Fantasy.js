@@ -1,18 +1,21 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import PastMatch from './PastMatch';
-import UpcomingMatch from './UpcomingMatch';
+import PastMatch from './PastMatches/PastMatch';
+import UpcomingMatch from './UpcomingMatches/UpcomingMatch';
+import MyTeam from './MyTeam/MyTeam';
 
 class Fantasy extends Component { 
 
     render() {
         return(
-            <div>
-                <h1>This is the page for the fantasy league.</h1>
-                {/* <Link to = '/playerinfo'>PlayerInfo</Link> */}
-                {/* <PastMatch /> */}
-                <PastMatch />
-                <UpcomingMatch />
+            <div id = 'fantasy-main'>
+                <PastMatch id = 'past-match'/>
+                <div id = 'details'>
+                    iuyhioyhjoij
+                </div>
+                <MyTeam id = 'my-team'/>
+                <UpcomingMatch id = 'coming-match'/>
+                
             </div>
         )
     }

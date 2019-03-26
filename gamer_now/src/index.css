@@ -6,10 +6,10 @@ body {
   font-family: "Montserrat", sans-serif, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  color: #FFFFFF;
+  color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #846C5B;
+  background-color: #EEEEEE;
 }
 
 code {

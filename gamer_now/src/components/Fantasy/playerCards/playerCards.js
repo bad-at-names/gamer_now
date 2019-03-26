@@ -1,10 +1,9 @@
 import React from 'react';
-import './PlayerInfo.css';
-import teamLogo from '../../main_assets/overwatch_teams/teamLogo';
+import '../Fantasy.css';
+import teamLogo from '../../layout/Frequents/teamLogo';
 
 const PlayerCards = (props) => {
     var c, ci, cf, cb;
-    const player = { props };
     if (props.player.role === "tank"){
         c = "player-card-blue";
         ci = "player-card-blue-inner";
@@ -37,6 +36,7 @@ const PlayerCards = (props) => {
                     <p>Hero Damage avg: { props.player.hero_damage_avg_per_10m.toFixed(2) }</p>
                     <p>Healing avg: { props.player.healing_avg_per_10m.toFixed(2) }</p>
                     <p>Kills: { props.player.final_blows_avg_per_10m.toFixed(2) }</p>
+                    <button className="add-buttons">Add to team</button>
                 </div>
             </div>
         </div>
