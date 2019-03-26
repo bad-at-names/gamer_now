@@ -1,0 +1,19 @@
+.schedule-teamlogo {
+    height: 30px;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+.no-break {
+    display: inline-block;
+}
+
+.match-scores {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 25px;
+}
+
+.playername {
+    text-align: center;
+}

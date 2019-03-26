@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Fantasy.css';
+import './playerCards.css';
 import teamLogo from '../../layout/Frequents/teamLogo';
 
 const PlayerCards = (props) => {

@@ -1,13 +1,14 @@
 import React , { Component } from 'react';
 import axios from 'axios';
 import teamLogo from '../../layout/Frequents/teamLogo';
-import '../Fantasy.css';
+import './PastMatch.css';
 
 
 class PastMatch extends Component {
     state = {
         matches: [ ]
     }
+
     componentDidMount(){
         const OverwatchLeague = require('overwatchleague');
         const OWL = new OverwatchLeague();
@@ -17,8 +18,10 @@ class PastMatch extends Component {
             })
         })
     }
+
     render() {
         var a, b, ascore, bscore;
+        
         const { matches } = this.state;
         const matchList = matches.length ? (
             matches.map(match => {
@@ -26,8 +29,9 @@ class PastMatch extends Component {
                 b = match.competitors[1].abbreviatedName;
                 ascore = match.scores[0].value;
                 bscore = match.scores[1].value;
+                const {showMatchDetail} = this.props;
                 return (
-                    <div className = "match-scores">
+                    <div onClick = {()=>{ showMatchDetail(match) }} className = "match-scores">
                         <h3 className = "no-break">{ a } { ascore }</h3>
                         <img src = { teamLogo(a) } alt = "" className = "schedule-teamlogo"/>
                         <h3 className = "no-break">VS</h3>
@@ -44,7 +48,6 @@ class PastMatch extends Component {
 
         return(
             <div id = 'past-match'>
-                {console.log(this.state)}
                 { matchList }
             </div>
         )

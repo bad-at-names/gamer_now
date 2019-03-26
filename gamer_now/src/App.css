@@ -24,11 +24,7 @@
 }
 
 .App{
-  background-image: url('./main_assets/background.svg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  min-height: 100vh;
+  background-color: #CCCCCC;
 }
 
 .log-buttons {

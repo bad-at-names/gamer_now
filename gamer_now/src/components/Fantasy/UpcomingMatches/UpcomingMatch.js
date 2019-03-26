@@ -15,6 +15,7 @@ class UpcomingMatch extends Component {
             this.setState({
                 matches: response.data
             })
+            console.log(this.state);
         })
     }
     render() {
