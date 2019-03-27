@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import axios from 'axios';
 import teamLogo from '../../layout/Frequents/teamLogo'
-import '../Fantasy.css';
+import './UpcomingMatches.css';
 
 
 class UpcomingMatch extends Component {
@@ -43,7 +43,7 @@ class UpcomingMatch extends Component {
         )
     
         return( 
-            <div id = 'coming-match'>
+            <div className = "coming-match-container">
                 { matchList }
             </div>
         )

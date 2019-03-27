@@ -1,3 +1,20 @@
+.past-match-container {
+    margin: 20px;
+    height: 95%;
+    background-color: rgba(67, 72, 76, 0.7);
+    transition-duration: 0.5s;
+    overflow-y: scroll;
+
+}
+
+.past-match-container::-webkit-scrollbar{
+    width:0;
+}
+
+.past-match-container:hover{
+    background-color: rgba(67, 72, 76, 0.9);
+}
+
 .schedule-teamlogo {
     height: 30px;
     line-height: inherit;
@@ -11,7 +28,7 @@
 .match-scores {
     margin-top: 1px;
     margin-bottom: 1px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 
 .playername {

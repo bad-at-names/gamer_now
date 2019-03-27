@@ -8,7 +8,7 @@ class PastMatch extends Component {
     state = {
         matches: [ ]
     }
-    
+
     componentDidMount(){
         const OverwatchLeague = require('overwatchleague');
         const OWL = new OverwatchLeague();
@@ -47,7 +47,7 @@ class PastMatch extends Component {
         )
 
         return(
-            <div id = 'past-match'>
+            <div className = 'past-match-container'>
                 { matchList }
             </div>
         )

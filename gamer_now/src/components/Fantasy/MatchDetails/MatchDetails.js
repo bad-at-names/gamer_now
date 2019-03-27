@@ -8,7 +8,7 @@ class MatchDetails extends Component {
     render(){
         if (this.props.matchId === "Loading"){
             return(
-                <div>
+                <div className="match-detail-container">
                     {console.log(this.props.matchId)}
                     wow
                 </div>
@@ -34,7 +34,7 @@ class MatchDetails extends Component {
             )
         
         return(
-            <div className = "">
+            <div className = "match-detail-container">
                 {this.props.matchId.competitors[0].name} { this.props.matchId.scores[0].value } VS { this.props.matchId.scores[0].value } {this.props.matchId.competitors[1].name}
                 { mapList }
             </div>
