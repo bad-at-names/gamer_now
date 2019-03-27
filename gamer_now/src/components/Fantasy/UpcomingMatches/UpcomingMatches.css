@@ -21,6 +21,11 @@
 .match-scores {
     margin: 1px;
     padding: 10px;
+    transition: 0.3s;
+}
+
+.match-scores:hover {
+    background-color: #2C2C2C;
 }
 
 .playername {

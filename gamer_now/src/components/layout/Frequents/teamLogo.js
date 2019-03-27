@@ -21,68 +21,69 @@ import VAN from '../../../main_assets/overwatch_teams/VAN.svg';
 import WAS from '../../../main_assets/overwatch_teams/WAS.svg';
 
 const teamLogo = (props) => {
-        var teamLogo;
-        switch(props){
-            case "ATL":
-                return ATL;
-                break;
-            case "BOS":
-                return BOS;
-                break;
-            case "CDH":
-                return CDH;
-                break;
-            case "DAL":
-                return DAL;
-                break;
-            case "FLA":
-                return FLA;
-                break;
-            case "GLA":
-                return GLA;
-                break;
-            case "GZC":
-                return GZC;
-                break;
-            case "HOU":
-                return HOU;
-                break;
-            case "HZS":
-                return HZS;
-                break;
-            case "LDN":
-                return LDN;
-                break;
-            case "NYE":
-                return NYE;
-                break;
-            case "PAR":
-                return PAR;
-                break;
-            case "PHI":
-                return PHI;
-                break;
-            case "SEO":
-                return SEO;
-                break;
-            case "SFS":
-                return SFS;
-                break;
-            case "SHD":
-                return SHD;
-                break;
-            case "TOR":
-                return TOR;
-                break;
-            case "VAL":
-                return VAL;
-                break;
-            case "VAN":
-                return VAN;
-                break;
-            default:
-                return WAS;
-        }
+    var teamlogo;
+    switch(props){
+        case "ATL":
+            teamlogo =  ATL;
+            break;
+        case "BOS":
+            teamlogo = BOS;
+            break;
+        case "CDH":
+            teamlogo = CDH;
+            break;
+        case "DAL":
+            teamlogo = DAL;
+            break;
+        case "FLA":
+            teamlogo =  FLA;
+            break;
+        case "GLA":
+            teamlogo = GLA;
+            break;
+        case "GZC":
+            teamlogo = GZC;
+            break;
+        case "HOU":
+            teamlogo = HOU;
+            break;
+        case "HZS":
+            teamlogo = HZS;
+            break;
+        case "LDN":
+            teamlogo = LDN;
+            break;
+        case "NYE":
+            teamlogo = NYE;
+            break;
+        case "PAR":
+            teamlogo = PAR;
+            break;
+        case "PHI":
+            teamlogo = PHI;
+            break;
+        case "SEO":
+            teamlogo = SEO;
+            break;
+        case "SFS":
+            teamlogo = SFS;
+            break;
+        case "SHD":
+            teamlogo = SHD;
+            break;
+        case "TOR":
+            teamlogo = TOR;
+            break;
+        case "VAL":
+            teamlogo = VAL;
+            break;
+        case "VAN":
+            teamlogo = VAN;
+            break;
+        default:
+            teamlogo = WAS;
+    }
+    return teamlogo;
 }
 
 export default teamLogo;

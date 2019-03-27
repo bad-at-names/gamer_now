@@ -10,7 +10,9 @@ class MatchDetails extends Component {
             return(
                 <div className="match-detail-container">
                     {console.log(this.props.matchId)}
-                    wow
+                    <h3 className="no-break">
+                        Select A Match on the Left to view Details
+                    </h3>
                 </div>
             )
         }
@@ -23,7 +25,9 @@ class MatchDetails extends Component {
                     return (
                         <div>
                             {console.log(maps)}
-                            { maps.attributes.mapScore.team1 } {maps.attributes.map ? maps.attributes.map : (maps.attributes.mapGuid === "0x0800000000000871" ? "rialto" : "busan")} { maps.attributes.mapScore.team2 }
+                            <h3 className="no-break">
+                                { maps.attributes.mapScore.team1 } {maps.attributes.map ? maps.attributes.map : (maps.attributes.mapGuid === "0x0800000000000871" ? "rialto" : "busan")} { maps.attributes.mapScore.team2 }
+                            </h3>
                         </div>
                     )
                 })
@@ -35,7 +39,9 @@ class MatchDetails extends Component {
         
         return(
             <div className = "match-detail-container">
+                <h3 className="no-break">
                 {this.props.matchId.competitors[0].name} { this.props.matchId.scores[0].value } VS { this.props.matchId.scores[0].value } {this.props.matchId.competitors[1].name}
+                </h3>
                 { mapList }
             </div>
         )

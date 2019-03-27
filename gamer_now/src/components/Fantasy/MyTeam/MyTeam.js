@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
-import '../Fantasy.css';
+import './MyTeam.css';
+import EmptyPlayerSlot from '../../../main_assets/emptyPlayerSlot.png';
 
 class MyTeam extends Component {
-    state = {
-        tanks: [ ],
-        offense: [ ],
-        support: [ ]
-    }
+    
     
     render(){
         return(
-            <div id = "my-team">
-                this is your team
+            <div className = "my-team-container">
+                <img src={ EmptyPlayerSlot } alt="" className="player-slot"/>
+                <img src={ EmptyPlayerSlot } alt="" className="player-slot"/>
+                <img src={ EmptyPlayerSlot } alt="" className="player-slot"/>
+                <img src={ EmptyPlayerSlot } alt="" className="player-slot"/>
+                <img src={ EmptyPlayerSlot } alt="" className="player-slot"/>
+                <img src={ EmptyPlayerSlot } alt="" className="player-slot"/>
             </div>
         )
     }
