@@ -8,7 +8,7 @@ class PastMatch extends Component {
     state = {
         matches: [ ]
     }
-
+    
     componentDidMount(){
         const OverwatchLeague = require('overwatchleague');
         const OWL = new OverwatchLeague();
