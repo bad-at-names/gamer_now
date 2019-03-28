@@ -1,4 +1,5 @@
 import React from 'react';
+import AddPlayer from './addPlayer';
 import './playerCards.css';
 import teamLogo from '../../layout/Frequents/teamLogo';
 
@@ -36,11 +37,13 @@ const PlayerCards = (props) => {
                     <p>Hero Damage avg: { props.player.hero_damage_avg_per_10m.toFixed(2) }</p>
                     <p>Healing avg: { props.player.healing_avg_per_10m.toFixed(2) }</p>
                     <p>Kills: { props.player.final_blows_avg_per_10m.toFixed(2) }</p>
-                    <button className="add-buttons">Add to team</button>
+                    <AddPlayer playerId = { props.player.playerId }/>
                 </div>
             </div>
         </div>
     )
 }
+
+
 
 export default PlayerCards;

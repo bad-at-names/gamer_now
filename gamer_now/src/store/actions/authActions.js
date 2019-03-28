@@ -28,16 +28,14 @@ export const signUp = (newUser) => {
     return (dispatch, getState, {getFirebase, getFirestore}) => {
       const firebase = getFirebase();
       const firestore = getFirestore();
-  
+      
       firebase.auth().createUserWithEmailAndPassword(
         newUser.email, 
         newUser.password
       ).then((resp) => {
         return firestore.collection('users').doc(resp.user.uid).set({
           email: newUser.email,
-          offense: ['',''],
-          tank: ['',''],
-          support: ['',''],
+          player: ["","","","","",""],
           score: 0
         })
       }).then(() => {

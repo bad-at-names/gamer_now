@@ -46,7 +46,7 @@ class Register extends Component {
                         <button className = "log-buttons">Register</button>
                     </div>
                     {/* <div>
-                        { authError ? <p>{authError}</p> : null }
+                        { auth.authError ? auth.authError : null }
                     </div> */}
                 </form>
         </div>
