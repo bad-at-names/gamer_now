@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Fantasy.css";
 import PlayerCards from "./playerCards/playerCards";
+import MyTeamSticky from "./MyTeamSticky/MyTeamSticky";
 
 class PlayerInfo extends Component {
   state = {
     players: []
   };
+
   componentDidMount() {
     axios.get("https://api.overwatchleague.com/stats/players").then(res => {
       this.setState({
@@ -29,6 +31,7 @@ class PlayerInfo extends Component {
     );
     return (
       <div>
+        <MyTeamSticky />
         <Link to="./fantasy">Back</Link>
         <div className="card-table">{playerList}</div>
       </div>
