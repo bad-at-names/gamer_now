@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import firebase from "firebase";
-import "./MyTeam.css";
+import "./MyTeamSticky.css";
 import EmptyPlayerSlot from "../../../main_assets/emptyPlayerSlot.png";
 import { SlotCard } from "../SlotCards/SlotCard";
 
-class MyTeam extends Component {
+class MyTeamSticky extends Component {
   state = {
     email: "",
     players: [null, null, null, null, null, null],
@@ -41,9 +41,13 @@ class MyTeam extends Component {
     });
   }
 
+  slot = pId => {
+    return;
+  };
+
   render() {
     return (
-      <div className="my-team-container">
+      <div className="my-team-sticky-container">
         Your Players:
         <Link to="./playerinfo">
           <SlotCard pId={this.state.players[0]} />
@@ -68,4 +72,4 @@ class MyTeam extends Component {
   }
 }
 
-export default MyTeam;
+export default MyTeamSticky;
