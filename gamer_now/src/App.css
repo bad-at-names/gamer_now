@@ -2,6 +2,10 @@
 
 *{
   font-family: "Montserrat", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .enpinput{
@@ -19,10 +23,14 @@
   opacity: 1.0;
 }
 
+.App{
+  background-color: #CCCCCC;
+}
+
 .log-buttons {
   display: inline-block;
   border-radius: 4px;
-  background-color: #D4F2DB;
+  background-color: #F5E3E0;
   border: none;
   color: #532C36;
   text-align: center;

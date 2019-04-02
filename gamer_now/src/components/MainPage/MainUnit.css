@@ -1,0 +1,24 @@
+.main-row-1 {
+    display: grid;
+    grid-template-columns: minmax(100px, 30%) minmax(300px, 70%);
+    grid-column-gap: 30px;
+}
+
+.main-row-2 {
+    display: grid;
+    grid-template-columns: minmax(300px, 70%) minmax(100px, 30%);
+    grid-column-gap: 30px;
+}
+
+.main-row-col {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 40px;
+}
+
+.service-icon {
+    position: relative;
+    height: 130%;
+    transform: translateX(-50%);
+}
