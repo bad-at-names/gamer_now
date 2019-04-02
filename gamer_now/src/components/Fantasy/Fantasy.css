@@ -1,33 +1,36 @@
 .fantasy-container {
-    display: grid;
-    grid-template-columns: minmax(200px, 25%) minmax(500px, 50%) minmax(200px, 25%);
-    grid-column-gap: 10px;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../main_assets/background-fantasy.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding-bottom: 65px;
+  display: grid;
+  grid-template-columns: minmax(200px, 25%) minmax(500px, 50%) minmax(
+      200px,
+      25%
+    );
+  grid-column-gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../main_assets/background-fantasy.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding-bottom: 65px;
 }
 
 .past-match {
-    display: grid;
+  display: grid;
 }
 
 .fantasy-sub-container {
-    display: grid;
-    grid-template-rows: minmax(125px, 20%) minmax(400px, 80%);
+  display: grid;
+  grid-template-rows: 125px minmax(400px, 80%);
 }
 
 .coming-match {
-    display: grid;
+  display: grid;
 }
 
 .my-team {
-    display: grid;
+  display: grid;
 }
 
 .details {
-    display: grid;
-    background-color: lightblue;
+  display: grid;
+  background-color: lightblue;
 }

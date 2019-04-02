@@ -1,35 +1,112 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { updateTeam } from '../../../store/actions/userActions';
-
+import React, { Component } from "react";
+import firebase from "firebase";
+import { connect } from "react-redux";
 
 class AddPlayer extends Component {
-    state = {
-        pId: null
-    }
-    
+  state = {
+    email: "",
+    players: []
+  };
 
-    addPlayerHandler = () => {
-        updateTeam(this.props.state);
-    }
+  email = null;
+  uData = null;
+  uTeam = [null, null, null, null, null, null];
 
-    render(){
-        return(
-            <button onClick = { ()=>{ this.addPlayerHandler() } } className="add-buttons">Add to team</button>
-        )
-    }
+  componentWillMount() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in.
+
+        user.providerData.forEach(profile => {
+          this.email = profile.email;
+        });
+
+        var db = firebase.firestore();
+        db.collection("users")
+          .doc(this.email)
+          .onSnapshot(doc => {
+            this.uData = doc.data();
+            this.uTeam = this.uData.player;
+          });
+      } else {
+      }
+    });
+  }
+
+  addPlayerHandler = i => {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in.
+        var db = firebase.firestore();
+
+        this.uTeam[i] = this.props.playerId;
+
+        var updateTeam = db.collection("users").doc(this.email);
+        console.log("This ran");
+        console.log(this.uTeam);
+        updateTeam.set({
+          player: this.uTeam
+        });
+      } else {
+        // No user is signed in.
+      }
+    });
+  };
+
+  render() {
+    return (
+      <div className="add-buttons">
+        <button
+          onClick={() => {
+            this.addPlayerHandler(0);
+          }}
+          className="add-buttons"
+        >
+          1
+        </button>
+        <button
+          onClick={() => {
+            this.addPlayerHandler(1);
+          }}
+          className="add-buttons"
+        >
+          2
+        </button>
+        <button
+          onClick={() => {
+            this.addPlayerHandler(2);
+          }}
+          className="add-buttons"
+        >
+          3
+        </button>
+        <button
+          onClick={() => {
+            this.addPlayerHandler(3);
+          }}
+          className="add-buttons"
+        >
+          4
+        </button>
+        <button
+          onClick={() => {
+            this.addPlayerHandler(4);
+          }}
+          className="add-buttons"
+        >
+          5
+        </button>
+        <button
+          onClick={() => {
+            this.addPlayerHandler(5);
+          }}
+          className="add-buttons"
+        >
+          6
+        </button>
+      </div>
+    );
+  }
 }
 
-const mapStateToProps = (state) => {
-    return {
-      pId: state.pId
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addPlayer: (pId) => dispatch(updateTeam(pId))
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddPlayer);
+export default AddPlayer;
