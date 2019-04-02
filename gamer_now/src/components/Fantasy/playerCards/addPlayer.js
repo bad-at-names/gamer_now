@@ -39,14 +39,14 @@ class AddPlayer extends Component {
         // User is signed in.
         var db = firebase.firestore();
 
-        this.uTeam[i] = this.props.playerId;
-
-        var updateTeam = db.collection("users").doc(this.email);
-        console.log("This ran");
-        console.log(this.uTeam);
-        updateTeam.set({
-          player: this.uTeam
-        });
+        if (!this.uTeam.includes(this.props.playerId)) {
+          this.uTeam[i] = this.props.playerId;
+          var updateTeam = db.collection("users").doc(this.email);
+          console.log(this.uTeam);
+          updateTeam.update({
+            player: this.uTeam
+          });
+        }
       } else {
         // No user is signed in.
       }
