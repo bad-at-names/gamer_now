@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import firebase from "firebase";
 import "./MyTeamSticky.css";
 import EmptyPlayerSlot from "../../../main_assets/emptyPlayerSlot.png";
-import { SlotCard } from "../SlotCards/SlotCard";
+import SlotCard from "../SlotCards/SlotCard";
 
 class MyTeamSticky extends Component {
   state = {
     email: "",
     players: [null, null, null, null, null, null],
-    pId: 0
+    score: 0
   };
 
   email = null;
@@ -31,19 +31,14 @@ class MyTeamSticky extends Component {
           .onSnapshot(doc => {
             this.uData = doc.data();
             this.setState({
-              players: this.uData.player
+              players: this.uData.player,
+              score: this.uData.score
             });
-
-            console.log("This is swornim");
           });
       } else {
       }
     });
   }
-
-  slot = pId => {
-    return;
-  };
 
   render() {
     return (
@@ -67,6 +62,7 @@ class MyTeamSticky extends Component {
         <Link to="./playerinfo">
           <SlotCard pId={this.state.players[5]} />
         </Link>
+        <span>Score: {this.state.score}</span>
       </div>
     );
   }

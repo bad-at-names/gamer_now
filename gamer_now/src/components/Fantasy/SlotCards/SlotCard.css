@@ -1,7 +1,36 @@
-.card {
-  padding: 30px 13px;
+.card-red,
+.card-green,
+.card-blue {
+  padding: 3px;
   border-radius: 10px;
-  background-color: salmon;
   display: inline-block;
   margin: 10px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.card-green {
+  background-color: #a0fab4;
+}
+
+.card-red {
+  background-color: #fea3aa;
+}
+
+.card-blue {
+  background-color: #b2cefe;
+}
+
+.player-image {
+  height: 60px;
+}
+
+h6 {
+  margin: 2px;
+}
+
+.card-red:hover,
+.card-green:hover,
+.card-blue:hover {
+  opacity: 1;
 }
