@@ -1,6 +1,55 @@
-import React from "react";
+import React, { Component } from "react";
+import firebase from "firebase";
 import "./SlotCard.css";
 
-export const SlotCard = props => {
-  return <div className="card">{props.pId}</div>;
-};
+class SlotCard extends Component {
+  state = {
+    pId: this.props.pId,
+    pImgUrl: "",
+    pName: "",
+    pRole: ""
+  };
+
+  componentWillReceiveProps() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in.
+        var db = firebase.firestore();
+        db.collection("players")
+          .doc(this.props.pId.toString())
+          .onSnapshot(doc => {
+            this.pData = doc.data();
+            this.setState({
+              pId: this.props.pId,
+              pImgUrl: this.pData.headshotUrl,
+              pName: this.pData.playerName,
+              pRole: this.pData.role
+            });
+          });
+      } else {
+      }
+    });
+  }
+
+  cardColor = pRole => {
+    switch (pRole) {
+      case "offense":
+        return "card-red";
+      case "support":
+        return "card-green";
+      case "tank":
+        return "card-blue";
+    }
+  };
+
+  render() {
+    return (
+      <div className={this.cardColor(this.state.pRole)}>
+        <img src={this.state.pImgUrl} alt="" className="player-image" />
+        <h6>{this.state.pName}</h6>
+      </div>
+    );
+  }
+}
+
+export default SlotCard;
