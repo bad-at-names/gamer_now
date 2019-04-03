@@ -1,0 +1,22 @@
+.my-team-sticky-container {
+  margin: 20px;
+  margin-bottom: 0px;
+  background-color: rgba(67, 72, 76, 0.7);
+  transition-duration: 0.5s;
+  position: sticky;
+  top: 50px;
+  z-index: 1000;
+}
+
+.my-team-container:hover {
+  background-color: rgba(67, 72, 76, 0.9);
+}
+
+.player-slot {
+  height: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
