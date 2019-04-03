@@ -8,25 +8,26 @@ class MakePlayerTable extends Component {
   };
 
   componentWillMount() {
-    axios.get("https://api.overwatchleague.com/stats/players").then(res => {
+    axios.get("https://api.overwatchleague.com/players").then(res => {
       this.setState({
-        players: res.data.data
+        players: res.data.content
       });
     });
   }
 
   render() {
-    console.log("this");
     const { players } = this.state;
     const playerList = players.length ? (
       players.map(player => {
         console.log("this");
         var db = firebase.firestore();
         db.collection("players")
-          .doc(player.playerId.toString())
+          .doc(player.id.toString())
           .set({
             playerName: player.name,
-            playerId: player.playerId,
+            playerId: player.id,
+            headshotUrl: player.headshot,
+            role: player.attributes.role,
             weekScore: 0
           });
       })

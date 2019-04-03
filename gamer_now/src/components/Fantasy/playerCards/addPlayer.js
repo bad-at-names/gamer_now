@@ -46,6 +46,8 @@ class AddPlayer extends Component {
           updateTeam.update({
             player: this.uTeam
           });
+        } else {
+          alert("This player is already in your roster!");
         }
       } else {
         // No user is signed in.
