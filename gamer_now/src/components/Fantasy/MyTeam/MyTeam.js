@@ -7,7 +7,7 @@ import SlotCard from "../SlotCards/SlotCard";
 class MyTeam extends Component {
   state = {
     email: "",
-    players: [null, null, null, null, null, null],
+    players: [8746, 8746, 8746, 8746, 8746, 8746],
     score: 0
   };
 
@@ -44,22 +44,22 @@ class MyTeam extends Component {
       <div className="my-team-container">
         Your Players:
         <Link to="./playerinfo">
-          <SlotCard pId={this.state.players[0]} />
+          <SlotCard pId={this.state.players[0].toString()} />
         </Link>
         <Link to="./playerinfo">
-          <SlotCard pId={this.state.players[1]} />
+          <SlotCard pId={this.state.players[1].toString()} />
         </Link>
         <Link to="./playerinfo">
-          <SlotCard pId={this.state.players[2]} />
+          <SlotCard pId={this.state.players[2].toString()} />
         </Link>
         <Link to="./playerinfo">
-          <SlotCard pId={this.state.players[3]} />
+          <SlotCard pId={this.state.players[3].toString()} />
         </Link>
         <Link to="./playerinfo">
-          <SlotCard pId={this.state.players[4]} />
+          <SlotCard pId={this.state.players[4].toString()} />
         </Link>
         <Link to="./playerinfo">
-          <SlotCard pId={this.state.players[5]} />
+          <SlotCard pId={this.state.players[5].toString()} />
         </Link>
         Score: {this.state.score}
       </div>
