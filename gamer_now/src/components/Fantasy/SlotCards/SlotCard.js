@@ -39,6 +39,8 @@ class SlotCard extends Component {
         return "card-green";
       case "tank":
         return "card-blue";
+      default:
+        return "card-grey";
     }
   };
 

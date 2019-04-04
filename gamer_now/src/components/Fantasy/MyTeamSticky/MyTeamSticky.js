@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import firebase from "firebase";
 import "./MyTeamSticky.css";
-import EmptyPlayerSlot from "../../../main_assets/emptyPlayerSlot.png";
 import SlotCard from "../SlotCards/SlotCard";
 
 class MyTeamSticky extends Component {

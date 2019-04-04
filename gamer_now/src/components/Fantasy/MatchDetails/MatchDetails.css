@@ -1,39 +1,41 @@
 .match-detail-container {
-    margin: 20px;
-    background-color: rgba(67, 72, 76, 0.7);
-    transition-duration: 0.5s;
-    overflow-y: scroll;
-
+  margin: 20px;
+  background-color: rgba(67, 72, 76, 0.7);
+  transition-duration: 0.5s;
+  overflow-y: scroll;
 }
 
-.match-detail-container::-webkit-scrollbar{
-    width: 0;
+.match-detail-container::-webkit-scrollbar {
+  width: 0;
 }
 
-.match-detail-container:hover{
-    background-color: rgba(67, 72, 76, 0.9);
+.match-detail-container:hover {
+  background-color: rgba(67, 72, 76, 0.9);
 }
 
-.game-list{
-    display: grid;
-    grid-template-columns: minmax(200px, 40%) minmax(100px, 20%) minmax(200px, 40%);
-    transition: 0.3s;
+.game-list {
+  display: grid;
+  grid-template-columns: minmax(200px, 40%) minmax(100px, 20%) minmax(
+      200px,
+      40%
+    );
+  transition: 0.3s;
 }
 
-.game-list:hover{
-    background-color: #2c2c2c;
+.game-list:hover {
+  background-color: #2c2c2c;
 }
 
 .team-game-score,
 .map-pic-container {
-    display: grid;
+  display: grid;
 }
 
-.map-pic{
-    height: 30px;
-    vertical-align: middle;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+.map-pic {
+  height: 30px;
+  vertical-align: middle;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
