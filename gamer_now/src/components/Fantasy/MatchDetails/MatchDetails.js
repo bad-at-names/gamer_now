@@ -1,8 +1,38 @@
 import React, { Component } from "react";
+import firebase from "firebase";
 import mapIcon from "../../layout/Frequents/mapIcon";
 import "./MatchDetails.css";
 
 class MatchDetails extends Component {
+    state = {
+        rows: []
+      };
+
+    // var rows = [];
+
+    componentWillMount() {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+        // User is signed in.
+
+            user.providerData.forEach(profile => {
+                this.email = profile.email;
+            });
+
+            var db = firebase.firestore();
+            db.collection("users").get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    // doc.data() is never undefined for query doc snapshots
+                    console.log(doc.id, " => ", doc.data().score);
+                    // var rows = this.state.rows
+                    // rows.push(doc.data().score)
+                    // this.setStete({rows: rows})
+                });
+            });
+        } else {
+        }
+        });
+    }
   render() {
     if (this.props.matchId === "Loading") {
       return (
@@ -11,6 +41,28 @@ class MatchDetails extends Component {
           <h3 className="no-break">
             Select A Match on the Left to view Details
           </h3>
+          <h2>Leaderboard</h2>
+          <div>
+            <table>  {/*Make this foreach user in the users collection*/}
+                <tr>
+                    <th>User</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>test@test.com</td>
+                    <td>34165</td>
+                </tr>
+                <tr>
+                    <td>zwern001@platsburgh.edu</td>
+                    <td>5462</td>
+                </tr>
+                {/* {rows.map((r) => (
+                    <tr>
+                        <td>{ rows }</td>
+                    </tr>
+                ))} */}
+            </table>
+          </div>
         </div>
       );
     } else {
