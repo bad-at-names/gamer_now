@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import MakePlayerTable from "../Fantasy/adminControls/MakePlayerTable";
 import UpdateUserScore from "../Fantasy/adminControls/updateUserScore";
+import CoachCard from "./CoachCard/CoachCard";
 
 class Coach extends Component {
   render() {
@@ -12,8 +13,9 @@ class Coach extends Component {
     return (
       <div>
         {/* <MakePlayerTable /> */}
-        <UpdateUserScore />
-        This is the page for the coaches.
+        {/* <UpdateUserScore /> */}
+        <CoachCard/>
+        
       </div>
     );
   }
