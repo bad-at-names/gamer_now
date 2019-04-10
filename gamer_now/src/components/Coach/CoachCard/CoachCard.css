@@ -31,4 +31,9 @@
 
 .booking-button {
     float: right;
+    
+}
+.booking-button button {
+    
+    padding: 15px 32px;
 }
