@@ -3,6 +3,10 @@ import { Redirect } from "react-router-dom";
 import firebase from "firebase";
 import "./CoachForm.css";
 
+import G0 from "../../../main_assets/game_logos/game0.png";
+import G1 from "../../../main_assets/game_logos/game1.png";
+import G2 from "../../../main_assets/game_logos/game2.png";
+
 import A0 from "../../../main_assets/avatars/avatar0.png";
 import A1 from "../../../main_assets/avatars/avatar1.png";
 import A2 from "../../../main_assets/avatars/avatar2.png";
@@ -23,7 +27,8 @@ class CoachForm extends Component {
       password: "",
       game: null,
       dscrptn: "",
-      rate: 0
+      rate: 0,
+      avatar: null
     };
   }
 
@@ -36,23 +41,17 @@ class CoachForm extends Component {
 
   handleCheck = e => {
     var a = e.target.id;
-    switch (a) {
-      case "dota2":
-        this.setState({
-          game: "dota2"
-        });
-        break;
-      case "overwatch":
-        this.setState({
-          game: "overwatch"
-        });
-        break;
-      case "csgo":
-        this.setState({
-          game: "csgo"
-        });
-        break;
-    }
+    this.setState({
+      game: a
+    });
+    console.log(this.state);
+  };
+
+  handleAvatar = e => {
+    var a = e.target.id;
+    this.setState({
+      avatar: a
+    });
 
     console.log(this.state);
   };
@@ -76,7 +75,8 @@ class CoachForm extends Component {
               email: this.state.username,
               game: this.state.game,
               description: this.state.dscrptn,
-              rate: this.state.rate
+              rate: this.state.rate,
+              avatar: this.state.avatar
             })
             .then(() => {
               return <Redirect to="/fantasy" />;
@@ -159,7 +159,7 @@ class CoachForm extends Component {
                 id="avatar0"
                 className="avatar"
                 label="avatar0"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A0} className="avatar-image" alt="" />
             </label>
@@ -171,7 +171,7 @@ class CoachForm extends Component {
                 id="avatar1"
                 className="avatar"
                 label="avatar1"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A1} className="avatar-image" alt="" />
             </label>
@@ -183,7 +183,7 @@ class CoachForm extends Component {
                 id="avatar2"
                 className="avatar"
                 label="avatar2"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A2} className="avatar-image" alt="" />
             </label>
@@ -195,7 +195,7 @@ class CoachForm extends Component {
                 id="avatar3"
                 className="avatar"
                 label="avatar3"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A3} className="avatar-image" alt="" />
             </label>
@@ -207,7 +207,7 @@ class CoachForm extends Component {
                 id="avatar4"
                 className="avatar"
                 label="avatar4"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A4} className="avatar-image" alt="" />
             </label>
@@ -219,7 +219,7 @@ class CoachForm extends Component {
                 id="avatar5"
                 className="avatar"
                 label="avatar5"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A5} className="avatar-image" alt="" />
             </label>
@@ -231,7 +231,7 @@ class CoachForm extends Component {
                 id="avatar6"
                 className="avatar"
                 label="avatar6"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A6} className="avatar-image" alt="" />
             </label>
@@ -243,7 +243,7 @@ class CoachForm extends Component {
                 id="avatar7"
                 className="avatar"
                 label="avatar7"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A7} className="avatar-image" alt="" />
             </label>
@@ -255,7 +255,7 @@ class CoachForm extends Component {
                 id="avatar8"
                 className="avatar"
                 label="avatar8"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A8} className="avatar-image" alt="" />
             </label>
@@ -267,43 +267,48 @@ class CoachForm extends Component {
                 id="avatar9"
                 className="avatar"
                 label="avatar9"
-                onChange={this.handleChange}
+                onChange={this.handleAvatar}
               />
               <img src={A9} className="avatar-image" alt="" />
             </label>
           </div>
           <div className="check-game">
-            <input
-              type="radio"
-              value="dota2"
-              name="game"
-              id="dota2"
-              label="dota2"
-              onChange={this.handleCheck}
-            />
-            <label htmlFor="dota2">Dota 2</label>
-          </div>
-          <div className="check-game">
-            <input
-              type="radio"
-              value="overwatch"
-              name="game"
-              id="overwatch"
-              label="overwatch"
-              onChange={this.handleCheck}
-            />
-            <label htmlFor="overwatch">Overwatch</label>
-          </div>
-          <div className="check-game">
-            <input
-              type="radio"
-              value="csgo"
-              name="game"
-              id="csgo"
-              label="csgo"
-              onChange={this.handleCheck}
-            />
-            <label htmlFor="csgo">CS:GO</label>
+            <label className="game-label" htmlFor="dota2">
+              <input
+                type="radio"
+                value="dota2"
+                name="game"
+                id="dota2"
+                label="dota2"
+                onChange={this.handleCheck}
+                className="game"
+              />
+              <img src={G0} className="game-image" alt="" />
+            </label>
+            <label className="game-label" htmlFor="overwatch">
+              <input
+                type="radio"
+                value="overwatch"
+                name="game"
+                id="overwatch"
+                label="overwatch"
+                onChange={this.handleCheck}
+                className="game"
+              />
+              <img src={G1} className="game-image1" alt="" />
+            </label>
+            <label className="game-label" htmlFor="csgo">
+              <input
+                type="radio"
+                value="csgo"
+                name="game"
+                id="csgo"
+                label="csgo"
+                onChange={this.handleCheck}
+                className="game"
+              />
+              <img src={G2} className="game-image1" alt="" />
+            </label>
           </div>
           <div>
             <button className="coach-form-button">Become a Coach</button>

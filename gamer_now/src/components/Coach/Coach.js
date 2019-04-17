@@ -7,14 +7,47 @@ import CoachCard from "./CoachCard/CoachCard";
 import CoachForm from "./CoachForm/CoachForm";
 
 class Coach extends Component {
+  state = {
+    coaches: []
+  };
+
+  componentDidMount() {
+    var s = this.state.coaches;
+    var db = firebase.firestore();
+    db.collection("coaches")
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          s.push(doc.data());
+        });
+        this.setState({
+          coaches: s
+        });
+        console.log(this.state.coaches);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
   render() {
     //const { auth } = this.props;
     //if (!auth.uid) return <Redirect to='/signin' />
+    const { coaches } = this.state;
+    const coachList = coaches.length ? (
+      coaches.map(coach => {
+        return <CoachCard coach={coach} key={coach.email} />;
+      })
+    ) : (
+      <h2>Loading ...</h2>
+    );
     return (
       <div>
-        <h1>Coaching</h1>
-        <CoachForm />
+        <span> Coaches </span>
+        <span className="sign-coach-button">Become a Coach</span>
+        {/* <CoachForm /> */}
         {/* <CoachCard /> */}
+        {coachList}
       </div>
     );
   }

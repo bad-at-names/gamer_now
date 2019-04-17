@@ -9,15 +9,16 @@
   padding: 30px;
 }
 
-.coach-img {
+.coach-img-container {
   float: left;
   background-color: white;
   height: 200px;
 }
 
-.coach-img img {
+.coach-img {
   height: 100%;
   width: auto;
+  border-radius: 100px;
 }
 
 .card:hover {
