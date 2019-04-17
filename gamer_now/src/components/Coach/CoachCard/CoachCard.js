@@ -15,7 +15,7 @@ const CoachCard = (props) => {
                 <hr></hr>
                 <p>Overwatch Flex DPS Player</p>
                 <div className="booking-button">
-                    <button>Book Coach</button> 
+                    <button>Book Coach for $10/hr</button> 
                 </div>
             </div>
          

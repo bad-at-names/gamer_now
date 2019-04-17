@@ -2,8 +2,10 @@ import React, { Component } from "react";
 //import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
+import CoachCard from "./CoachCard/CoachCard";
 import MakePlayerTable from "../Fantasy/adminControls/MakePlayerTable";
 import UpdateUserScore from "../Fantasy/adminControls/updateUserScore";
+import PlayerScore from "../Fantasy/adminControls/playerScore";
 
 class Coach extends Component {
   render() {
@@ -12,8 +14,10 @@ class Coach extends Component {
     return (
       <div>
         {/* <MakePlayerTable /> */}
-        <UpdateUserScore />
-        This is the page for the coaches.
+        {/*<UpdateUserScore /> */}
+        {/* <MakePlayerTable /> */}
+        {/* <PlayerScore /> */}
+        <CoachCard />
       </div>
     );
   }
