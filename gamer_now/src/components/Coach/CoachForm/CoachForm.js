@@ -279,13 +279,13 @@ class CoachForm extends Component {
             </label>
           </div>
           <div className="check-game">
-            <label className="game-label" htmlFor="dota2">
+            <label className="game-label" htmlFor="dota">
               <input
                 type="radio"
-                value="dota2"
+                value="dota"
                 name="game"
-                id="dota2"
-                label="dota2"
+                id="dota"
+                label="dota"
                 onChange={this.handleCheck}
                 className="game"
               />
