@@ -13,16 +13,6 @@ class Login extends Component {
     password: ""
   };
 
-  /* uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,  // facebook button config
-    ],
-    callbacks: {
-      signInSuccess: () => false
-    }
-  } */
-
   handleChange = e => {
     this.setState({
       [e.target.id]: e.target.value

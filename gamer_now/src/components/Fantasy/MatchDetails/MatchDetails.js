@@ -21,11 +21,11 @@ class MatchDetails extends Component {
           mapName = maps.name;
           return (
             <div className="game-list" key={maps.id}>
-              {console.log(maps)}
               <h3 className="team-game-score">
                 {maps.attributes.mapScore.team1}
               </h3>
               <div className="map-pic-container">
+                {console.log(maps.attributes.map)}
                 <img
                   src={mapIcon(
                     maps.attributes.map

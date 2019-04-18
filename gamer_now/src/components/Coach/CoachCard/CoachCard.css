@@ -1,34 +1,51 @@
 .card {
-    margin: auto;
-    background-color: white;
-    color: black;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 70%;
-  }
+  margin: 20px auto;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 70%;
+  position: relative;
+  padding: 30px;
+}
 
 .coach-img {
-    float: left;
-    background-color: white;
-    height: 200px;
+  float: left;
+  background-color: white;
+  height: 200px;
 }
 
 .coach-img img {
-    height: 100%;
-    width: auto;
+  height: 100%;
+  width: auto;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .content {
-    background-color: white;
-    padding: 10px 16px;
-    height: 180px;
-    width: auto;
+  background-color: white;
+  padding: 10px 16px;
+  height: 180px;
+  width: auto;
 }
 
 .booking-button {
-    float: right;
+  position: absolute;
+  right: 30px;
+  float: right;
+  bottom: 40px;
+}
+
+.booking-button button {
+  padding: 15px 32px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.game-logo {
+  height: 40px;
 }

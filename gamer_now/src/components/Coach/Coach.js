@@ -1,11 +1,11 @@
 import React, { Component } from "react";
+import firebase from "firebase";
 //import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import CoachCard from "./CoachCard/CoachCard";
-import MakePlayerTable from "../Fantasy/adminControls/MakePlayerTable";
-import UpdateUserScore from "../Fantasy/adminControls/updateUserScore";
-import PlayerScore from "../Fantasy/adminControls/playerScore";
+import CoachForm from "./CoachForm/CoachForm";
+
 
 class Coach extends Component {
   render() {
@@ -13,11 +13,9 @@ class Coach extends Component {
     //if (!auth.uid) return <Redirect to='/signin' />
     return (
       <div>
-        {/* <MakePlayerTable /> */}
-        {/*<UpdateUserScore /> */}
-        {/* <MakePlayerTable /> */}
-        {/* <PlayerScore /> */}
-        <CoachCard />
+        <h1>Coaching</h1>
+        <CoachForm />
+        {/* <CoachCard /> */}
       </div>
     );
   }
