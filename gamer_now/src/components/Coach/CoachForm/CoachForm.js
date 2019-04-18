@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import firebase from "firebase";
 import "./CoachForm.css";
 
@@ -28,7 +28,8 @@ class CoachForm extends Component {
       game: null,
       dscrptn: "",
       rate: 0,
-      avatar: null
+      avatar: null,
+      success: false
     };
   }
 
@@ -57,6 +58,7 @@ class CoachForm extends Component {
   };
 
   handleSubmit = e => {
+    var success = true;
     var user = firebase.auth().currentUser;
     var credentials = firebase.auth.EmailAuthProvider.credential(
       this.state.username,
@@ -77,256 +79,256 @@ class CoachForm extends Component {
               description: this.state.dscrptn,
               rate: this.state.rate,
               avatar: this.state.avatar
-            })
-            // .then(() => {
-            //   stripe oauth 
-            // })
-            // .then(() => {
-            //   write stripe cred to firestore 
-            // })
-            .then(() => {
-              return <Redirect to="/coach" />;
             });
         })
         .catch(error => {
           alert(error.message);
+          success = false;
         });
     } else {
       alert("You need to login first.");
     }
+    if (success) {
+      this.setState({
+        success: true
+      });
+    }
   };
 
   render() {
-    return (
-      <div className="coach-form-super-container">
-        <form className="coach-form-container" onSubmit={this.handleSubmit}>
-          <div>
-            <input
-              type="text"
-              name=""
-              id="name"
-              className="cred-inputs"
-              placeholder="Full Name"
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name=""
-              id="username"
-              className="cred-inputs"
-              placeholder="Username"
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              name=""
-              id="password"
-              className="cred-inputs"
-              placeholder="Password"
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="number"
-              name=""
-              id="rate"
-              className="rate-input"
-              placeholder="Rate"
-              onChange={this.handleChange}
-              required
-            />
-            {"  "}
-            /hr
-          </div>
-          <div>
-            <textarea
-              name=""
-              id="dscrptn"
-              className="dsc-inputs"
-              placeholder="Description"
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label className="avatar-label" htmlFor="avatar0">
+    if (!this.state.success) {
+      return (
+        <div className="coach-form-super-container">
+          <form className="coach-form-container" onSubmit={this.handleSubmit}>
+            <div>
               <input
-                type="radio"
-                value="avatar0"
-                name="avatar"
-                id="avatar0"
-                className="avatar"
-                label="avatar0"
-                onChange={this.handleAvatar}
+                type="text"
+                name=""
+                id="name"
+                className="cred-inputs"
+                placeholder="Name"
+                onChange={this.handleChange}
+                required
               />
-              <img src={A0} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar1">
+            </div>
+            <div>
               <input
-                type="radio"
-                value="avatar1"
-                name="avatar"
-                id="avatar1"
-                className="avatar"
-                label="avatar1"
-                onChange={this.handleAvatar}
+                type="text"
+                name=""
+                id="username"
+                className="cred-inputs"
+                placeholder="Username"
+                onChange={this.handleChange}
+                required
               />
-              <img src={A1} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar2">
+            </div>
+            <div>
               <input
-                type="radio"
-                value="avatar2"
-                name="avatar"
-                id="avatar2"
-                className="avatar"
-                label="avatar2"
-                onChange={this.handleAvatar}
+                type="password"
+                name=""
+                id="password"
+                className="cred-inputs"
+                placeholder="Password"
+                onChange={this.handleChange}
+                required
               />
-              <img src={A2} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar3">
+            </div>
+            <div>
               <input
-                type="radio"
-                value="avatar3"
-                name="avatar"
-                id="avatar3"
-                className="avatar"
-                label="avatar3"
-                onChange={this.handleAvatar}
+                type="number"
+                name=""
+                id="rate"
+                className="rate-input"
+                placeholder="Rate"
+                onChange={this.handleChange}
+                required
               />
-              <img src={A3} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar4">
-              <input
-                type="radio"
-                value="avatar4"
-                name="avatar"
-                id="avatar4"
-                className="avatar"
-                label="avatar4"
-                onChange={this.handleAvatar}
+              {"  "}
+              /hr
+            </div>
+            <div>
+              <textarea
+                name=""
+                id="dscrptn"
+                className="dsc-inputs"
+                placeholder="Description"
+                onChange={this.handleChange}
+                required
               />
-              <img src={A4} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar5">
-              <input
-                type="radio"
-                value="avatar5"
-                name="avatar"
-                id="avatar5"
-                className="avatar"
-                label="avatar5"
-                onChange={this.handleAvatar}
-              />
-              <img src={A5} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar6">
-              <input
-                type="radio"
-                value="avatar6"
-                name="avatar"
-                id="avatar6"
-                className="avatar"
-                label="avatar6"
-                onChange={this.handleAvatar}
-              />
-              <img src={A6} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar7">
-              <input
-                type="radio"
-                value="avatar7"
-                name="avatar"
-                id="avatar7"
-                className="avatar"
-                label="avatar7"
-                onChange={this.handleAvatar}
-              />
-              <img src={A7} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar8">
-              <input
-                type="radio"
-                value="avatar8"
-                name="avatar"
-                id="avatar8"
-                className="avatar"
-                label="avatar8"
-                onChange={this.handleAvatar}
-              />
-              <img src={A8} className="avatar-image" alt="" />
-            </label>
-            <label className="avatar-label" htmlFor="avatar9">
-              <input
-                type="radio"
-                value="avatar9"
-                name="avatar"
-                id="avatar9"
-                className="avatar"
-                label="avatar9"
-                onChange={this.handleAvatar}
-              />
-              <img src={A9} className="avatar-image" alt="" />
-            </label>
-          </div>
-          <div className="check-game">
-            <label className="game-label" htmlFor="dota">
-              <input
-                type="radio"
-                value="dota"
-                name="game"
-                id="dota"
-                label="dota"
-                onChange={this.handleCheck}
-                className="game"
-              />
-              <img src={G0} className="game-image" alt="" />
-            </label>
-            <label className="game-label" htmlFor="overwatch">
-              <input
-                type="radio"
-                value="overwatch"
-                name="game"
-                id="overwatch"
-                label="overwatch"
-                onChange={this.handleCheck}
-                className="game"
-              />
-              <img src={G1} className="game-image1" alt="" />
-            </label>
-            <label className="game-label" htmlFor="csgo">
-              <input
-                type="radio"
-                value="csgo"
-                name="game"
-                id="csgo"
-                label="csgo"
-                onChange={this.handleCheck}
-                className="game"
-              />
-              <img src={G2} className="game-image1" alt="" />
-            </label>
-          </div>
-          <div>
-          <a href="https://connect.stripe.com/oauth/authorize?response_type=code&amp;client_id=ca_E3knZAX3KUUPTvamrcELICFtqgGeY20q&amp;scope=read_write" class="connect-button">
-          <span>Connect with Stripe</span></a>
-          </div>
-          <div>
-            {/* this will link to stripe oauth */}
-            <button className="coach-form-button">Become a Coach</button>
-          </div>
-        </form>
-      </div>
-    );
+            </div>
+            <div>
+              <label className="avatar-label" htmlFor="avatar0">
+                <input
+                  type="radio"
+                  value="avatar0"
+                  name="avatar"
+                  id="avatar0"
+                  className="avatar"
+                  label="avatar0"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A0} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar1">
+                <input
+                  type="radio"
+                  value="avatar1"
+                  name="avatar"
+                  id="avatar1"
+                  className="avatar"
+                  label="avatar1"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A1} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar2">
+                <input
+                  type="radio"
+                  value="avatar2"
+                  name="avatar"
+                  id="avatar2"
+                  className="avatar"
+                  label="avatar2"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A2} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar3">
+                <input
+                  type="radio"
+                  value="avatar3"
+                  name="avatar"
+                  id="avatar3"
+                  className="avatar"
+                  label="avatar3"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A3} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar4">
+                <input
+                  type="radio"
+                  value="avatar4"
+                  name="avatar"
+                  id="avatar4"
+                  className="avatar"
+                  label="avatar4"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A4} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar5">
+                <input
+                  type="radio"
+                  value="avatar5"
+                  name="avatar"
+                  id="avatar5"
+                  className="avatar"
+                  label="avatar5"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A5} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar6">
+                <input
+                  type="radio"
+                  value="avatar6"
+                  name="avatar"
+                  id="avatar6"
+                  className="avatar"
+                  label="avatar6"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A6} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar7">
+                <input
+                  type="radio"
+                  value="avatar7"
+                  name="avatar"
+                  id="avatar7"
+                  className="avatar"
+                  label="avatar7"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A7} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar8">
+                <input
+                  type="radio"
+                  value="avatar8"
+                  name="avatar"
+                  id="avatar8"
+                  className="avatar"
+                  label="avatar8"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A8} className="avatar-image" alt="" />
+              </label>
+              <label className="avatar-label" htmlFor="avatar9">
+                <input
+                  type="radio"
+                  value="avatar9"
+                  name="avatar"
+                  id="avatar9"
+                  className="avatar"
+                  label="avatar9"
+                  onChange={this.handleAvatar}
+                />
+                <img src={A9} className="avatar-image" alt="" />
+              </label>
+            </div>
+            <div className="check-game">
+              <label className="game-label" htmlFor="dota">
+                <input
+                  type="radio"
+                  value="dota"
+                  name="game"
+                  id="dota"
+                  label="dota"
+                  onChange={this.handleCheck}
+                  className="game"
+                />
+                <img src={G0} className="game-image" alt="" />
+              </label>
+              <label className="game-label" htmlFor="overwatch">
+                <input
+                  type="radio"
+                  value="overwatch"
+                  name="game"
+                  id="overwatch"
+                  label="overwatch"
+                  onChange={this.handleCheck}
+                  className="game"
+                />
+                <img src={G1} className="game-image1" alt="" />
+              </label>
+              <label className="game-label" htmlFor="csgo">
+                <input
+                  type="radio"
+                  value="csgo"
+                  name="game"
+                  id="csgo"
+                  label="csgo"
+                  onChange={this.handleCheck}
+                  className="game"
+                />
+                <img src={G2} className="game-image1" alt="" />
+              </label>
+            </div>
+            <div>
+              <a href="https://connect.stripe.com/oauth/authorize?response_type=code&amp;client_id=ca_E3knZAX3KUUPTvamrcELICFtqgGeY20q&amp;scope=read_write" >
+              <span>Connect with Stripe</span></a>
+            </div>
+            <div>
+              <button className="coach-form-button">Become a Coach</button>
+            </div>
+          </form>
+        </div>
+      );
+    } else {
+      return <Redirect to="./Coach" />;
+    }
   }
 }
 

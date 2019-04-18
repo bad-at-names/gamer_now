@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from "firebase";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import CoachCard from "./CoachCard/CoachCard";
@@ -56,7 +56,11 @@ class Coach extends Component {
     var s = this.state.coaches;
     this.setState({
       coaches: s.sort((a, b) =>
-        a.name > b.name ? 1 : b.name > a.name ? -1 : 0
+        a.name.toLowercase > b.name.toLowercase
+          ? 1
+          : b.name.toLowercase > a.name.toLowercase
+          ? -1
+          : 0
       )
     });
   };
@@ -92,7 +96,7 @@ class Coach extends Component {
       <h2>Loading ...</h2>
     );
     return (
-      <div>
+      <div className="coach-container">
         <div className="top-bar">
           <h2> Coaches </h2>
           <div className="search-bar-container">
@@ -106,7 +110,7 @@ class Coach extends Component {
               onChange={this.handleSearch}
             />
           </div>
-          <span className="filters">Filters</span>
+          <span className="filters">Filters:</span>
           <label className="game-label" htmlFor="dota">
             <input
               type="radio"
@@ -180,12 +184,9 @@ class Coach extends Component {
             />
             <span>Name</span>
           </label>
-          
-          <Link to="./coachapplication">
-            <span className="sign-coach-button" onMouseOver={this.asd}>
-              Become a Coach
-            </span>
-          </Link>
+          <span className="sign-coach-button">
+            <Link to="./coachapplication">Become a Coach</Link>
+          </span>
         </div>
         {coachList}
       </div>

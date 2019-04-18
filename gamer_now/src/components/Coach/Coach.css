@@ -1,3 +1,7 @@
+.coach-container {
+  /* background-image: url("../../main_assets/"); */
+}
+
 .game {
   position: absolute;
   opacity: 0;
@@ -34,7 +38,7 @@
 .top-bar {
   position: sticky;
   z-index: 1000;
-  top: 50px;
+  top: 70px;
   transition-duration: 0.5s;
   background-color: rgba(67, 72, 76, 0.7);
   padding-bottom: 20px;
