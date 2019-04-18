@@ -11,7 +11,9 @@
 
 .coach-img-container {
   float: left;
-  background-color: white;
+  padding: 4px;
+  border-radius: 102px;
+  background-color: black;
   height: 200px;
 }
 
