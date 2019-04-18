@@ -9,6 +9,7 @@ import PlayerInfo from './components/Fantasy/PlayerInfo';
 import Coach from './components/Coach/Coach';
 import Forum from './components/Forum/Forum';
 import MainPage from './components/MainPage/MainPage';
+import CoachForm from './components/Coach/CoachForm/CoachForm';
 import './App.css';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route path = '/forum' component = { Forum } />
             <Route path = '/coach' component = { Coach } />
             <Route path = '/playerinfo' component = { PlayerInfo } />
+            <Route path = '/coachapplication' component = { CoachForm } />
             <Route path = '/' component = { MainPage } />
           </Switch>
           <FooterBar />
