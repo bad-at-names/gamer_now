@@ -78,12 +78,14 @@ class CoachForm extends Component {
               game: this.state.game,
               description: this.state.dscrptn,
               rate: this.state.rate,
-              avatar: this.state.avatar
+              avatar: this.state.avatar,
+              stars: 0
             });
         })
         .catch(error => {
-          alert(error.message);
-          success = false;
+          if (error === null) {
+            success = false;
+          }
         });
     } else {
       alert("You need to login first.");
@@ -134,6 +136,7 @@ class CoachForm extends Component {
               />
             </div>
             <div>
+              ${"   "}
               <input
                 type="number"
                 name=""

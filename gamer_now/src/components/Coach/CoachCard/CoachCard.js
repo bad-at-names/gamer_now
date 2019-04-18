@@ -29,6 +29,7 @@ class CoachCard extends Component {
           <div className="booking-button">
             <p>Book Coach</p>
             <button>${this.props.coach.rate}/hr</button>
+            <p>{this.props.coach.stars}/5.0</p>
           </div>
         </div>
       </div>
