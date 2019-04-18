@@ -8,7 +8,8 @@ import CoachForm from "./CoachForm/CoachForm";
 
 class Coach extends Component {
   state = {
-    coaches: []
+    coaches: [],
+    search: ""
   };
 
   componentDidMount() {
@@ -30,13 +31,21 @@ class Coach extends Component {
       });
   }
 
+  handleSearch = e => {
+    this.setState({
+      search: new RegExp(".*" + e.target.value + ".*", "i")
+    });
+  };
+
   render() {
     //const { auth } = this.props;
     //if (!auth.uid) return <Redirect to='/signin' />
     const { coaches } = this.state;
     const coachList = coaches.length ? (
       coaches.map(coach => {
-        return <CoachCard coach={coach} key={coach.email} />;
+        if (coach.name.match(this.state.search)) {
+          return <CoachCard coach={coach} key={coach.email} />;
+        }
       })
     ) : (
       <h2>Loading ...</h2>
@@ -44,7 +53,19 @@ class Coach extends Component {
     return (
       <div>
         <span> Coaches </span>
-        <span className="sign-coach-button">Become a Coach</span>
+        <div>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            className="search-bar"
+            placeholder="Search"
+            onChange={this.handleSearch}
+          />
+        </div>
+        <span className="sign-coach-button" onMouseOver={this.asd}>
+          Become a Coach
+        </span>
         {/* <CoachForm /> */}
         {/* <CoachCard /> */}
         {coachList}
