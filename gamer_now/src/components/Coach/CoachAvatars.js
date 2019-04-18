@@ -29,7 +29,7 @@ export const avatar = a => {
       return avatar7;
     case "avatar8":
       return avatar8;
-    case "avatar9":
+    default:
       return avatar9;
   }
 };
