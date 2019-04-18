@@ -320,6 +320,10 @@ class CoachForm extends Component {
               </label>
             </div>
             <div>
+              <a href="https://connect.stripe.com/oauth/authorize?response_type=code&amp;client_id=ca_E3knZAX3KUUPTvamrcELICFtqgGeY20q&amp;scope=read_write" >
+              <span>Connect with Stripe</span></a>
+            </div>
+            <div>
               <button className="coach-form-button">Become a Coach</button>
             </div>
           </form>

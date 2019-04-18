@@ -1,3 +1,4 @@
+    
 import React, { Component } from "react";
 import { avatar } from "../CoachAvatars";
 import firebase from "firebase";
@@ -28,6 +29,7 @@ class CoachCard extends Component {
           <p>{this.props.coach.description}</p>
           <div className="booking-button">
             <p>Book Coach</p>
+            {/* link this to a stripe checkout prompt */}
             <button>${this.props.coach.rate}/hr</button>
             <p>{this.props.coach.stars}/5.0</p>
           </div>

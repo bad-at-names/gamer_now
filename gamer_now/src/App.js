@@ -19,14 +19,14 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/fantasy" component={Fantasy} />
-            <Route path="/forum" component={Forum} />
-            <Route path="/coach" component={Coach} />
-            <Route path="/coachForm" component={CoachForm} />
-            <Route path="/playerinfo" component={PlayerInfo} />
-            <Route path="/" component={MainPage} />
+            <Route path = '/login' component = { Login } />
+            <Route path = '/register' component = { Register } />
+            <Route path = '/fantasy' component = { Fantasy } />
+            <Route path = '/forum' component = { Forum } />
+            <Route path = '/coach' component = { Coach } />
+            <Route path = '/playerinfo' component = { PlayerInfo } />
+            <Route path = '/coachapplication' component = { CoachForm } />
+            <Route path = '/' component = { MainPage } />
           </Switch>
           <FooterBar />
         </div>

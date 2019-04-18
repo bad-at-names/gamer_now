@@ -13,6 +13,7 @@ import G1 from "../../main_assets/game_logos/game1.png";
 import G2 from "../../main_assets/game_logos/game2.png";
 import N from "../../main_assets/game_logos/none.png";
 
+
 class Coach extends Component {
   constructor(props) {
     super(props);
@@ -184,7 +185,7 @@ class Coach extends Component {
             <span>Name</span>
           </label>
           <span className="sign-coach-button">
-            <Link to="./coachForm">Become a Coach</Link>
+            <Link to="./coachapplication">Become a Coach</Link>
           </span>
         </div>
         {coachList}
