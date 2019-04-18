@@ -6,10 +6,15 @@ import { Redirect } from "react-router-dom";
 import CoachCard from "./CoachCard/CoachCard";
 import CoachForm from "./CoachForm/CoachForm";
 
+import G0 from "../../main_assets/game_logos/game0.png";
+import G1 from "../../main_assets/game_logos/game1.png";
+import G2 from "../../main_assets/game_logos/game2.png";
+
 class Coach extends Component {
   state = {
     coaches: [],
-    search: ""
+    search: "",
+    gameFilter: ""
   };
 
   componentDidMount() {
@@ -31,6 +36,12 @@ class Coach extends Component {
       });
   }
 
+  handleCheck = e => {
+    this.setState({
+      gameFilter: e.target.value
+    });
+  };
+
   handleSearch = e => {
     this.setState({
       search: new RegExp(".*" + e.target.value + ".*", "i")
@@ -43,7 +54,10 @@ class Coach extends Component {
     const { coaches } = this.state;
     const coachList = coaches.length ? (
       coaches.map(coach => {
-        if (coach.name.match(this.state.search)) {
+        if (
+          coach.name.match(this.state.search) &&
+          (coach.game == this.state.gameFilter || this.state.gameFilter === "")
+        ) {
           return <CoachCard coach={coach} key={coach.email} />;
         }
       })
@@ -53,6 +67,56 @@ class Coach extends Component {
     return (
       <div>
         <span> Coaches </span>
+        <div className="check-game">
+          <label className="game-label" htmlFor="dota">
+            <input
+              type="radio"
+              value="dota"
+              name="game"
+              id="dota"
+              label="dota"
+              onChange={this.handleCheck}
+              className="game"
+            />
+            <img src={G0} className="game-image" alt="" />
+          </label>
+          <label className="game-label" htmlFor="overwatch">
+            <input
+              type="radio"
+              value="overwatch"
+              name="game"
+              id="overwatch"
+              label="overwatch"
+              onChange={this.handleCheck}
+              className="game"
+            />
+            <img src={G1} className="game-image1" alt="" />
+          </label>
+          <label className="game-label" htmlFor="csgo">
+            <input
+              type="radio"
+              value="csgo"
+              name="game"
+              id="csgo"
+              label="csgo"
+              onChange={this.handleCheck}
+              className="game"
+            />
+            <img src={G2} className="game-image1" alt="" />
+          </label>
+          <label className="game-label" htmlFor="None">
+            <input
+              type="radio"
+              value=""
+              name="game"
+              id="None"
+              label="None"
+              onChange={this.handleCheck}
+              className="game"
+            />
+            <img src={G2} className="game-image1" alt="" />
+          </label>
+        </div>
         <div>
           <input
             type="text"
