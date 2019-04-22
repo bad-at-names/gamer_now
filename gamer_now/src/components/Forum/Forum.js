@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PlayerScore from "../Fantasy/adminControls/playerScore";
+import PlayerScore from "../Fantasy/AdminControls/playerScore";
 //import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
@@ -11,7 +11,6 @@ class Forum extends Component {
     return (
       <div>
         <h1>This is the page for the Forums.</h1>
-        <PlayerScore />
       </div>
     );
   }

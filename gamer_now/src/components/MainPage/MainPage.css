@@ -3,10 +3,9 @@
   grid-template-rows: repeat(3, minmax(200px, 300px));
   grid-row-gap: 30px;
   padding-bottom: 50px;
-  background-image: url("../../main_assets/background-main.svg");
+  background-image: url("../../main_assets/backgrounds/background-main.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: ;
 }
 
 .title-tags {

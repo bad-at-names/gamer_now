@@ -1,4 +1,3 @@
-    
 import React, { Component } from "react";
 import { avatar } from "../CoachAvatars";
 import firebase from "firebase";

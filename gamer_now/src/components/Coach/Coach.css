@@ -1,5 +1,7 @@
 .coach-container {
-  /* background-image: url("../../main_assets/"); */
+  background-image: url("../../main_assets/backgrounds/background_coach.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .game {
