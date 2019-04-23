@@ -1,8 +1,40 @@
 import React, { Component } from "react";
+import firebase from "firebase";
 import mapIcon from "../../layout/Frequents/mapIcon";
 import "./MatchDetails.css";
 
 class MatchDetails extends Component {
+  state = {
+    rows: []
+  };
+
+  // var rows = [];
+
+  componentWillMount() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in.
+
+        user.providerData.forEach(profile => {
+          this.email = profile.email;
+        });
+
+        var db = firebase.firestore();
+        db.collection("users")
+          .get()
+          .then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+              // doc.data() is never undefined for query doc snapshots
+              console.log(doc.id, " => ", doc.data().score);
+              // var rows = this.state.rows
+              // rows.push(doc.data().score)
+              // this.setStete({rows: rows})
+            });
+          });
+      } else {
+      }
+    });
+  }
   render() {
     if (this.props.matchId === "Loading") {
       return (

@@ -7,10 +7,11 @@ import Register from "./components/auth/Register";
 import Fantasy from "./components/Fantasy/Fantasy";
 import PlayerInfo from "./components/Fantasy/PlayerInfo";
 import Coach from "./components/Coach/Coach";
-import CoachForm from "./components/Coach/CoachForm/CoachForm";
 import Forum from "./components/Forum/Forum";
 import MainPage from "./components/MainPage/MainPage";
 import "./App.css";
+import Leaderboard from "./components/Fantasy/Leaderboard/Leaderboard";
+import CoachForm from "./components/Coach/CoachForm/CoachForm";
 
 class App extends Component {
   render() {
@@ -19,14 +20,15 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Switch>
-            <Route path = '/login' component = { Login } />
-            <Route path = '/register' component = { Register } />
-            <Route path = '/fantasy' component = { Fantasy } />
-            <Route path = '/forum' component = { Forum } />
-            <Route path = '/coach' component = { Coach } />
-            <Route path = '/playerinfo' component = { PlayerInfo } />
-            <Route path = '/coachapplication' component = { CoachForm } />
-            <Route path = '/' component = { MainPage } />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/fantasy" component={Fantasy} />
+            <Route path="/forum" component={Forum} />
+            <Route path="/coach" component={Coach} />
+            <Route path="/playerinfo" component={PlayerInfo} />
+            <Route path="/coachapplication" component={CoachForm} />
+            <Route path="/leaderboard" component={Leaderboard} />
+            <Route path="/" component={MainPage} />
           </Switch>
           <FooterBar />
         </div>

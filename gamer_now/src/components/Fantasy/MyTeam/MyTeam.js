@@ -7,7 +7,7 @@ import SlotCard from "../SlotCards/SlotCard";
 class MyTeam extends Component {
   state = {
     email: "",
-    players: [8746, 8746, 8746, 8746, 8746, 8746],
+    players: [3380, 3479, 3504, 3577, 3660, 3969],
     score: 0
   };
 
