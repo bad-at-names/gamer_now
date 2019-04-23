@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import firebase from "firebase";
-import { connect } from "react-redux";
 
 class AddPlayer extends Component {
   state = {

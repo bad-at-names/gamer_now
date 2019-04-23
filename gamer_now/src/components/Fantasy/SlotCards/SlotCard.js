@@ -16,7 +16,7 @@ class SlotCard extends Component {
         // User is signed in.
         var db = firebase.firestore();
         db.collection("players")
-          .doc(this.props.pId.toString())
+          .doc(this.props.pId)
           .onSnapshot(doc => {
             this.pData = doc.data();
             this.setState({
@@ -31,6 +31,15 @@ class SlotCard extends Component {
     });
   }
 
+  componentWillUnmount() {
+    this.setState({
+      pId: this.props.pId,
+      pImgUrl: "",
+      pName: "",
+      pRole: ""
+    });
+  }
+
   cardColor = pRole => {
     switch (pRole) {
       case "offense":
@@ -39,6 +48,8 @@ class SlotCard extends Component {
         return "card-green";
       case "tank":
         return "card-blue";
+      default:
+        return "card-grey";
     }
   };
 

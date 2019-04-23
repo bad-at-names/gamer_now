@@ -1,7 +1,9 @@
 const functions = require('firebase-functions');
-// const firebase = require("firebase");
-// const firebase = require("firebase/firestore");
+const admin = require('firebase-admin');
 const OverwatchLeague = require('overwatchleague');
+
+
+admin.initializeApp(functions.config().firebase);
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -11,31 +13,35 @@ const OverwatchLeague = require('overwatchleague');
 // });
 
 // user score function pseudocode
-// for each user {
-//     for each player {
-//          grab playerScore
-//     }
-//     week = avg(playerScore)
-//     score = score+week //show to user on leaderboard
-// }
+    // fetch users tables from firebase
+    // for each user {
+    //     for each player {
+    //          grab playerScore
+    //     }
+    //     week = avg(playerScore)
+    //     score = score+week //show to user on leaderboard
+    // }
 
 // playerScore function pseudocode
-// for each match{
-//     for each map{
-//         mount api endpoint of that matchid and map#
-//         mapScore = avg((elim*1)+(death*(-3))+(dmg*.001)+(heal*.001))
-//     }
-//     matchScore = avg(mapScore)
-// }
-// playerScore = avg(matchScore)
+    // fetch the weeks document from firebase
+    // for each match{
+    //     for each map{
+    //         mount api endpoint of that matchid and map#
+    //         mapScore = avg((elim*1)+(death*(-3))+(dmg*.001)+(heal*.001))
+    //     }
+    //     matchScore = avg(mapScore)
+    // }
+    // playerScore = avg(matchScore)
 
-//initializing the players table
-exports.playerTable = functions.https.onRequest((request, response) => {
-    // db = firebase.firestore();
-    const OWL = new OverwatchLeague();
-    // db.collection("players").add()
-    OWL.getTeams().then(res => {
-        teams: res.data.data
+// playerScore calculator
+exports.playerScore = functions.https.onRequest((request, response) => {
+    var db = firebase.firestore();
+    // var matches = db.collection('weeks');
+    db.collection("weeks").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+        });
     });
-    response.send({teams: 'data'});
+    response.send("Updating last weeks player scores");
 });

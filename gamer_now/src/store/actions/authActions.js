@@ -41,7 +41,7 @@ export const signUp = newUser => {
           .doc(resp.user.email)
           .set({
             email: newUser.email,
-            player: [],
+            player: [3380, 3479, 3504, 3577, 3660, 3969],
             score: 0
           });
       })
