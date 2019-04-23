@@ -34,3 +34,15 @@
   display: grid;
   background-color: lightblue;
 }
+
+.leaderboard-button {
+  margin: 20px;
+  margin-bottom: 0px;
+  background-color: rgba(67, 72, 76, 0.7);
+  transition-duration: 0.5s;
+  color: white;
+}
+
+.leaderboard-button h2 {
+  padding: 20px;
+}

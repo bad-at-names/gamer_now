@@ -1,0 +1,29 @@
+.leaderboard-container {
+  height: 60vh;
+  width: 50vh;
+  background-color: rgba(150, 150, 150, 0.7);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leaderboard-container:hover {
+  background-color: rgba(150, 150, 150, 0.9);
+}
+
+.leaderboard-component {
+  text-transform: uppercase;
+}
+
+.right-span {
+  float: right;
+}
+
+.vis {
+  visibility: hidden;
+}
