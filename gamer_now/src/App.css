@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-*{
+* {
   font-family: "Montserrat", sans-serif;
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
@@ -8,7 +8,7 @@
   user-select: none;
 }
 
-.enpinput{
+.enpinput {
   width: 100%;
   padding: 5px;
   margin: 8px 0;
@@ -19,20 +19,20 @@
   opacity: 0.7;
 }
 
-.enpinput:active{
-  opacity: 1.0;
+.enpinput:active {
+  opacity: 1;
 }
 
-.App{
-  background-color: #CCCCCC;
+.App {
+  background-color: #cccccc;
 }
 
 .log-buttons {
   display: inline-block;
   border-radius: 4px;
-  background-color: #F5E3E0;
+  background-color: #f5e3e0;
   border: none;
-  color: #532C36;
+  color: #532c36;
   text-align: center;
   font-size: 1.3em;
   padding: 0.2em;
@@ -43,7 +43,7 @@
   text-decoration: none;
 }
 
-.form-title{
+.form-title {
   position: relative;
   top: -10px;
 }

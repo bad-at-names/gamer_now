@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import firebase from "firebase";
-import axios from "axios";
+import React, { Component } from "./node_modules/react";
+import firebase from "./node_modules/firebase";
+import axios from "./node_modules/axios";
 
 class MakePlayerTable extends Component {
   state = {
