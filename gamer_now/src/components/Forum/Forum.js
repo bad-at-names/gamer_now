@@ -49,7 +49,7 @@ class Forum extends Component {
     return (
       <div>
         <Link to="./newpostform">New Post Form</Link>
-        {/* {postList} */}
+        {postList}
       </div>
     );
   }

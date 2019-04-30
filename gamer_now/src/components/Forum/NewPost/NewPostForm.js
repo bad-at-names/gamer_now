@@ -37,7 +37,7 @@ class NewPostForm extends Component {
           var timeStamp = time.getTime();
           var db = firebase.firestore();
           db.collection("posts")
-            .doc(this.state.username.slice(0, 4) + timeStamp.toString())
+            .doc(user.uid + "___" + timeStamp.toString())
             .set({
               title: this.state.title,
               email: this.state.username,
