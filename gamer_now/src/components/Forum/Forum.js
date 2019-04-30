@@ -3,14 +3,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import NewPostForm from "./NewPost/NewPostForm";
+import Post from "./Post/Post"
 import firebase from "firebase";
 
 class Forum extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts: [],
-
+            posts: []
         };
     }
     componentDidMount() {
@@ -37,12 +37,22 @@ class Forum extends Component {
     render() {
         //const { auth } = this.props;
         //if (!auth.uid) return <Redirect to='/signin' />
-        
+        const { posts } = this.state;
+        const postList = posts.length ? (
+            posts.map(post => {
+                return <Post post={post} key={post.title} />
+            })
+        ) : (
+            <h2>Loading ...</h2>
+        );
+
         return (
             <div>
                 {/* <NewPostForm /> */}
-
-            </div>);
+                {/* <Post /> */}
+                {postList}
+            </div>
+        );
     }
 }
 
