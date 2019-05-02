@@ -48,7 +48,9 @@ class Forum extends Component {
 
     return (
       <div>
-        <Link to="./newpostform">New Post Form</Link>
+        <button>
+          <Link to="./newpostform">New Post Form</Link>
+        </button>
         {postList}
       </div>
     );
