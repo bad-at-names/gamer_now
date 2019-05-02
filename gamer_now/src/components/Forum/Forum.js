@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import NewPostForm from "./NewPost/NewPostForm";
-import Post from "./Post/Post";
+import PostCard from "./PostCard/PostCard";
 import firebase from "firebase";
 
 class Forum extends Component {
@@ -40,7 +40,7 @@ class Forum extends Component {
     const { posts } = this.state;
     const postList = posts.length ? (
       posts.map(post => {
-        return <Post post={post} key={post.title} />;
+        return <PostCard post={post} key={post.title} />;
       })
     ) : (
       <h2>Loading ...</h2>
@@ -49,7 +49,8 @@ class Forum extends Component {
     return (
       <div>
         <Link to="./newpostform">New Post Form</Link>
-        {postList}
+        <NewPostForm />
+        {/* {postList} */}
       </div>
     );
   }

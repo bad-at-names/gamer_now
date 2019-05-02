@@ -39,6 +39,7 @@ class NewPostForm extends Component {
           db.collection("posts")
             .doc(user.uid + "_" + timeStamp.toString())
             .set({
+              postId: user.uid + "_" + timeStamp.toString(),
               title: this.state.title,
               email: this.state.username,
               question: this.state.question,

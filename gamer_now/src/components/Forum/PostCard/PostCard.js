@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 // import "./CoachCard.css";
-import "./Post.css";
+import "./PostCard.css";
 
-class Post extends Component {
+class PostCard extends Component {
   render() {
     return (
       <div className="forum-card">
@@ -12,13 +13,10 @@ class Post extends Component {
           </h2>
           <hr />
           <div className="post-content">{this.props.post.question}</div>
-          <div className="booking-button">
-            <button>Reply</button>
-          </div>
         </div>
       </div>
     );
   }
 }
 
-export default Post;
+export default PostCard;
