@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import ReactModal from 'react-modal';
 import firebase from 'firebase';
 // import "./CoachCard.css";
-import "./post.css";
+import "./PostCard.css";
 
-class Post extends Component {
+class PostCard extends Component {
   constructor () {
     super();
     this.state = {
@@ -29,10 +29,15 @@ class Post extends Component {
     var ctimeStamp = time.getTime();
     var db = firebase.firestore();
     db.collection("posts")
-      .doc(this.props.user.uid + "_" + ctimeStamp.toString())
+      .doc(this.props.postId + "_" + ctimeStamp.toString())
       .set({
+        postId: this.props.postId + this.props.timeStamp.toString(),
+        title: this.props.title,
+        email: this.props.username,
+        question: this.props.question,
+        timestamp: this.props.timeStamp,
         ctimestamp: ctimeStamp,
-        comments: []
+        comments: "Hey here's a comment"
       });
   }
 
@@ -72,4 +77,4 @@ class Post extends Component {
   }
 }
 
-export default Post;
+export default PostCard;
