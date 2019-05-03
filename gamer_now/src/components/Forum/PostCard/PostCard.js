@@ -32,6 +32,13 @@ class PostCard extends Component {
       });
   }
 
+  handleChange = e => {
+    this.setState({
+      comment: e.target.value
+    });
+    console.log(this.state);
+  };
+
   handleSubmitComment = e => {
     e.preventDefault();
     var user = firebase.auth().currentUser;
@@ -51,6 +58,18 @@ class PostCard extends Component {
         time: timestamp,
         isCoach: true
       });
+    var p = {
+      id: user.email + "__" + timestamp.toString(),
+      commentBody: this.state.comment,
+      commentOwner: user.email,
+      time: timestamp,
+      isCoach: true
+    };
+    var prevComments = this.state.comments;
+    prevComments.push(p);
+    this.setState({
+      comments: prevComments
+    });
     console.log(this.state.comments);
   };
 
@@ -73,29 +92,16 @@ class PostCard extends Component {
           <hr />
           <div className="post-content">{this.props.post.question}</div>
           <div className="booking-button">
-            <button onClick={this.handleOpenModal}>Reply</button>
-            <ReactModal
-              isOpen={this.state.showModal}
-              contentLabel="Comment modal"
-            >
-              <form onSubmit={this.handleSubmit}>
-                <button onClick={this.handleCloseModal}>X</button>
-                <p>Leave a comment</p>
-                <textarea id="comment" />
-                <button>Leave a comment</button>
-              </form>
-            </ReactModal>
+            <form onSubmit={this.handleSubmitComment}>
+              <p>Leave a comment</p>
+              <textarea id="comment" onChange={this.handleChange} />
+              <button onSubmit={this.handleSubmitComment}>
+                Leave a comment
+              </button>
+            </form>
           </div>
         </div>
         {commentList}
-        <form onSubmit={this.handleSubmitComment}>
-          <textarea
-            onChange={this.handleChange}
-            placeholder="Enter comment here"
-            id="comment"
-          />
-          <button onSubmit={this.handleSubmitComment}>Submit</button>
-        </form>
       </div>
     );
   }
