@@ -72,6 +72,20 @@ class PostCard extends Component {
           </h2>
           <hr />
           <div className="post-content">{this.props.post.question}</div>
+          <div className="booking-button">
+            <button onClick={this.handleOpenModal}>Reply</button>
+            <ReactModal
+              isOpen={this.state.showModal}
+              contentLabel="Comment modal"
+            >
+              <form onSubmit={this.handleSubmit}>
+                <button onClick={this.handleCloseModal}>X</button>
+                <p>Leave a comment</p>
+                <textarea id="comment" />
+                <button>Leave a comment</button>
+              </form>
+            </ReactModal>
+          </div>
         </div>
         {commentList}
         <form onSubmit={this.handleSubmitComment}>

@@ -21,5 +21,4 @@ class Post extends Component {
     return <div>{this.props.props.title}</div>;
   }
 }
-
 export default Post;
