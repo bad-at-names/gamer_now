@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import firebase from "firebase";
 
 class Post extends Component {
@@ -10,15 +11,15 @@ class Post extends Component {
       coach: false
     };
     var user = firebase.auth().currentUser;
-    var db = firebase.firestore();
-    db.collection("posts")
-    .get(this.props.postId)
     if (user) {
+    } else {
+      return <Redirect to="./" />;
     }
   }
-  render() {
-    return <div>{this.props.title}</div>;
-  }
 
+  render() {
+    return <div>{this.props.props.title}</div>;
+  }
+}
 
 export default Post;
