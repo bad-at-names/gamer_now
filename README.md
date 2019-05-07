@@ -1,6 +1,6 @@
 # GamerNow
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-[![Discord](https://img.shields.io/badge/Discord-Tautulli-7289DA.svg?style=flat-square)
+[![Discord]
 
 ## Available Scripts
 
