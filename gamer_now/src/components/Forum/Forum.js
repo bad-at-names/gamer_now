@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
-import NewPostForm from "./NewPost/NewPostForm";
 import PostCard from "./PostCard/PostCard";
 import firebase from "firebase";
 
@@ -13,6 +10,7 @@ class Forum extends Component {
       posts: []
     };
   }
+
   componentDidMount() {
     var s = this.state.posts;
     var db = firebase.firestore();
@@ -37,6 +35,7 @@ class Forum extends Component {
   render() {
     //const { auth } = this.props;
     //if (!auth.uid) return <Redirect to='/signin' />
+
     const { posts } = this.state;
     const postList = posts.length ? (
       posts.map(post => {
@@ -49,7 +48,6 @@ class Forum extends Component {
     return (
       <div>
         <Link to="./newpostform">New Post Form</Link>
-        {/* <NewPostForm /> */}
         {postList}
       </div>
     );

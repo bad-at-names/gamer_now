@@ -36,14 +36,24 @@ export const signUp = newUser => {
       .auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
       .then(resp => {
-        return firestore
-          .collection("users")
-          .doc(resp.user.email)
-          .set({
-            email: newUser.email,
-            player: [3380, 3479, 3504, 3577, 3660, 3969],
-            score: 0
-          });
+        console.log(newUser);
+        return (
+          firestore
+            .collection("users")
+            .doc(resp.user.email)
+            .set({
+              email: newUser.email,
+              player: [3380, 3479, 3504, 3577, 3660, 3969],
+              score: 0,
+              avatar: newUser.avatar
+            }) &&
+          firebase
+            .auth()
+            .currentUser()
+            .updateProfile({
+              displayName: newUser.name
+            })
+        );
       })
       .then(() => {
         dispatch({ type: "SIGNUP_SUCCESS" });

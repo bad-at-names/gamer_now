@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import firebase from "firebase";
-import Post from "../Posts/Post";
 import CommentCard from "./CommentCard";
 // import "./CoachCard.css";
 import "./PostCard.css";
@@ -84,7 +83,6 @@ class PostCard extends Component {
     );
     return (
       <div className="forum-card">
-        <Post props={this.props.post} />
         <div className="card-content">
           <h2 className="post-title">
             <b>{this.props.post.title}</b>

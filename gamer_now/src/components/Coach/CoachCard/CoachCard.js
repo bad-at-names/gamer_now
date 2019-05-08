@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { avatar } from "../CoachAvatars";
+import { avatar } from "../../layout/Frequents/Avatars";
 import firebase from "firebase";
 import gameLogo from "../../layout/Frequents/gameLogo";
 import "./CoachCard.css";

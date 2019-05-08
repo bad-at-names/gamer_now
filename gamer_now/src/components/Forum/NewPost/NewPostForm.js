@@ -64,6 +64,9 @@ class NewPostForm extends Component {
 
   render() {
     var user = firebase.auth().currentUser;
+    if (!user) {
+      return <Redirect to="./login" />;
+    }
     if (!this.state.success && user) {
       return (
         <div className="coach-form-super-container">
