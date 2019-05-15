@@ -37,3 +37,21 @@
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  background-color: #2c2c2c;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:hover {background-color: #2c2c2c;}
