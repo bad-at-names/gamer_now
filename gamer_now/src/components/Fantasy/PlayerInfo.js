@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import firebase from "firebase";
 import axios from "axios";
 import "./Fantasy.css";
 import PlayerCards from "./playerCards/playerCards";
@@ -19,8 +20,10 @@ class PlayerInfo extends Component {
   }
 
   render() {
-    //const { auth } = this.props;
-    //if (!auth.uid) return <Redirect to='/signin' />
+    var user = firebase.auth().currentUser;
+    if (!user) {
+      return <Redirect to="./login" />;
+    }
     const { players } = this.state;
     const playerList = players.length ? (
       players.map(player => {
@@ -39,12 +42,4 @@ class PlayerInfo extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  //console.log(state);
-  return {
-    auth: state.firebase.auth
-  };
-};
-
-//export default connect(mapStateToProps)(Fantasy);
 export default PlayerInfo;

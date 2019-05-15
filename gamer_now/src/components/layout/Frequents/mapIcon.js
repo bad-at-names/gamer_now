@@ -19,71 +19,76 @@ import TOA from '../../../main_assets/overwatch_maps/toa.jpg';
 import VOL from '../../../main_assets/overwatch_maps/vol.jpg';
 import WAT from '../../../main_assets/overwatch_maps/wat.jpg';
 
-const mapIcon = (props) => {
-    var icon;
-    switch(props) {
-        case "blizzard":
-            icon = BLI;
-            break;
-        case "busan":
-            icon = BUS;
-            break;
-        case "dorado":
-            icon = DOR;
-            break;
-        case "eichenwalde":
-            icon = EIC;
-            break;
-        case "hanamura":
-            icon = HAN;
-            break;
-        case "horizon-lunar-colony":
-            icon = HLC;
-            break;
-        case "hollywood":
-            icon = HOL;
-            break;
-        case "ilios":
-            icon = ILI;
-            break;
-        case "junkertown":
-            icon = JUN;
-            break;
-        case "kings-row":
-            icon = KIN;
-            break;
-        case "lijiang-tower":
-            icon = LIJ;
-            break;
-        case "nepal":
-            icon = NEP;
-            break;
-        case "numbani":
-            icon = NUM;
-            break;
-        case "oasis":
-            icon = OAS;
-            break;
-        case "paris":
-            icon = PAR;
-            break;
-        case "rialto":
-            icon = RIA;
-            break;
-        case "route-66":
-            icon = ROU;
-            break;
-        case "temple-of-anubis":
-            icon = TOA;
-            break;
-        case "volskaya":
-            icon = VOL;
-            break;
-        case "watchpoint-gibraltar":
-            icon = WAT;
-            break;
-    }
-    return icon;
-}
+const mapIcon = props => {
+	var icon;
+	switch (props) {
+		case 'blizzard':
+		case 'blizzard-world':
+			icon = BLI;
+			break;
+		case 'busan':
+			icon = BUS;
+			break;
+		case 'dorado':
+			icon = DOR;
+			break;
+		case 'eichenwalde':
+			icon = EIC;
+			break;
+		case 'hanamura':
+			icon = HAN;
+			break;
+		case 'horizon-lunar-colony':
+		case 'lunar-colony':
+			icon = HLC;
+			break;
+		case 'hollywood':
+			icon = HOL;
+			break;
+		case 'ilios':
+			icon = ILI;
+			break;
+		case 'junkertown':
+			icon = JUN;
+			break;
+		case 'kings-row':
+			icon = KIN;
+			break;
+		case 'lijiang-tower':
+		case 'lijiang':
+			icon = LIJ;
+			break;
+		case 'nepal':
+			icon = NEP;
+			break;
+		case 'numbani':
+			icon = NUM;
+			break;
+		case 'oasis':
+			icon = OAS;
+			break;
+		case 'paris':
+			icon = PAR;
+			break;
+		case 'rialto':
+			icon = RIA;
+			break;
+		case 'route-66':
+			icon = ROU;
+			break;
+		case 'temple-of-anubis':
+		case 'anubis':
+			icon = TOA;
+			break;
+		case 'volskaya':
+			icon = VOL;
+			break;
+		case 'gibraltar':
+		case 'watchpoint-gibraltar':
+			icon = WAT;
+			break;
+	}
+	return icon;
+};
 
 export default mapIcon;

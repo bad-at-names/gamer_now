@@ -9,6 +9,7 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-firebaseui": "^3.1.2",
+    "react-modal": "^3.8.1",
     "react-redux": "^6.0.1",
     "react-redux-firebase": "^2.2.6",
     "react-router-dom": "^4.3.1",

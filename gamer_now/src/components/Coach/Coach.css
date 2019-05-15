@@ -1,0 +1,93 @@
+.coach-container {
+  background-image: url("../../main_assets/backgrounds/background_coach.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.game {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.game + .game-image,
+.game + .game-image1 {
+  cursor: pointer;
+  transition: 0.7s;
+  border-radius: 35px;
+  padding: 5px;
+}
+
+.game:checked + .game-image,
+.game:checked + .game-image1 {
+  background-color: black;
+}
+
+.game-image {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.game-image1 {
+  height: 35px;
+}
+
+.game-label {
+  margin: 10px;
+}
+
+.top-bar {
+  position: sticky;
+  z-index: 1000;
+  top: 70px;
+  transition-duration: 0.5s;
+  background-color: rgba(67, 72, 76, 0.7);
+  padding-bottom: 20px;
+}
+
+.top-bar:hover {
+  background-color: rgba(67, 72, 76, 0.75);
+}
+
+.search-bar-container {
+  display: inline-block;
+  margin: auto;
+  padding: 5px;
+  vertical-align: top;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1.1em;
+}
+
+.search-icon {
+  height: 15px;
+  margin: 0px 5px 0px 15px;
+}
+
+.filters {
+  margin: 0px 5px 0px 15px;
+}
+
+.sign-coach-button {
+  margin-left: 20px;
+  border-radius: 30px;
+  background-color: #d4f2db;
+  border: none;
+  color: #532c36;
+  text-align: center;
+  font-size: 1.3em;
+  padding: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  opacity: 0.7;
+  height: 80x;
+}

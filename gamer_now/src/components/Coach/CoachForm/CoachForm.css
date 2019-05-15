@@ -1,0 +1,140 @@
+.cred-inputs {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+.rate-input {
+  width: 90%;
+  padding: 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+
+.enpinput:active {
+  opacity: 1;
+}
+
+.coach-form-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f5e3e0;
+  border: none;
+  color: #532c36;
+  text-align: center;
+  font-size: 1.3em;
+  padding: 14px;
+  transition: all 0.5s;
+  cursor: pointer;
+  opacity: 0.7;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.coach-form-super-container {
+  text-align: center;
+  background-color: #b1b6a6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  border-radius: 20px;
+  width: 32%;
+}
+
+.dsc-inputs {
+  width: 100%;
+  padding: 5px;
+  height: 100px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.7;
+  resize: none;
+}
+
+.pic-input {
+  display: none;
+}
+
+.pic-button {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  color: #909090;
+  background-color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+
+.avatar-label {
+  margin: 5px;
+}
+
+.avatar {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.avatar + .avatar-image {
+  cursor: pointer;
+  transition: 0.7s;
+  border-radius: 25px;
+}
+
+.avatar:checked + .avatar-image {
+  background-color: yellow;
+}
+
+.avatar-image {
+  height: 50px;
+}
+
+.game {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.game + .game-image,
+.game + .game-image1 {
+  cursor: pointer;
+  transition: 0.7s;
+  border-radius: 35px;
+  padding: 5px;
+}
+
+.game:checked + .game-image,
+.game:checked + .game-image1 {
+  background-color: black;
+}
+
+.game-image {
+  height: 60px;
+}
+
+.game-image1 {
+  height: 55px;
+  vertical-align: top;
+}
+
+.game-label {
+  margin: 20px;
+}
