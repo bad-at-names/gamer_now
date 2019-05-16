@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import firebase from 'firebase';
+import { avatar } from '../../layout/Frequents/Avatars';
 import CommentCard from './CommentCard';
 // import "./CoachCard.css";
 import './PostCard.css';
@@ -62,7 +63,8 @@ class PostCard extends Component {
 						id: user.email + '__' + timestamp.toString(),
 						commentBody: this.state.comment,
 						commentOwner: dName,
-						time: timestamp
+						time: timestamp,
+						isCoach: dIsCoach
 					});
 				var p = {
 					id: user.email + '__' + timestamp.toString(),
@@ -92,9 +94,13 @@ class PostCard extends Component {
 		return (
 			<div className="forum-card">
 				<div className="card-content">
-					<h2 className="post-title">
-						<b>{this.props.post.title}</b>
-					</h2>
+					<div className="post-title">
+						<img src={avatar(this.props.post.avatar)} className="post-avatar" alt="" />
+						<div>
+							<div>{this.props.post.name}</div>
+							<b>{this.props.post.title}</b>
+						</div>
+					</div>
 					<hr />
 					<div className="post-content">{this.props.post.question}</div>
 					<div className="booking-button">
