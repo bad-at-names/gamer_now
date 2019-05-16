@@ -5,16 +5,15 @@ import GAMERnow from '../../../main_assets/GAMERnow.png';
 import Arrow from '../../../main_assets/arrow.svg';
 
 const NavBar = () => {
-    return (
-        <div id="nav-div">
-            <div id = "nav-logos">
-                <Link to='/'>    
-                    <img src = { GAMERnow } alt="" id="gamernow_navlogo"/>
-                </Link>
-                <img src = { Arrow } alt='' id= "arrow"/>
-            </div>
-        </div>
-    )
-}
+	return (
+		<div id="nav-div">
+			<div id="nav-logos">
+				<Link to="/">
+					<img src={GAMERnow} alt="" id="gamernow_navlogo" />
+				</Link>
+			</div>
+		</div>
+	);
+};
 
 export default NavBar;

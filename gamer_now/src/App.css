@@ -1,54 +1,54 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-*{
-  font-family: "Montserrat", sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  user-select: none;
+* {
+	font-family: 'Montserrat', sans-serif;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-.enpinput{
-  width: 100%;
-  padding: 5px;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  opacity: 0.7;
+.enpinput {
+	width: 100%;
+	padding: 5px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	opacity: 0.7;
 }
 
-.enpinput:active{
-  opacity: 1.0;
+.enpinput:active {
+	opacity: 1;
 }
 
-.App{
-  background-color: #CCCCCC;
+.App {
+	background-color: #000000;
 }
 
 .log-buttons {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #F5E3E0;
-  border: none;
-  color: #532C36;
-  text-align: center;
-  font-size: 1.3em;
-  padding: 0.2em;
-  transition: all 0.5s;
-  cursor: pointer;
-  opacity: 0.7;
-  margin: 10px;
-  text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #f5e3e0;
+	border: none;
+	color: #532c36;
+	text-align: center;
+	font-size: 1.3em;
+	padding: 0.2em;
+	transition: all 0.5s;
+	cursor: pointer;
+	opacity: 0.7;
+	margin: 10px;
+	text-decoration: none;
 }
 
-.form-title{
-  position: relative;
-  top: -10px;
+.form-title {
+	position: relative;
+	top: -10px;
 }
 
 .log-box {
-  position: fixed;
-  right: 2%;
+	position: fixed;
+	right: 2%;
 }

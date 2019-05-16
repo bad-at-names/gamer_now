@@ -3,7 +3,6 @@ import { Link, Redirect } from 'react-router-dom';
 import firebase from 'firebase';
 import { avatar } from '../../layout/Frequents/Avatars';
 import CommentCard from './CommentCard';
-// import "./CoachCard.css";
 import './PostCard.css';
 
 class PostCard extends Component {

@@ -1,48 +1,55 @@
 .fantasy-container {
-  display: grid;
-  grid-template-columns: minmax(200px, 25%) minmax(500px, 50%) minmax(
-      200px,
-      25%
-    );
-  grid-column-gap: 10px;
-  width: 100%;
-  min-height: 100vh;
-  background-image: url("../../main_assets/backgrounds/background-fantasy.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  position: fixed;
+	display: grid;
+	grid-template-columns: minmax(200px, 25%) minmax(500px, 50%) minmax(200px, 25%);
+	grid-column-gap: 10px;
+	width: 100%;
+	min-height: 100vh;
+	background-image: url('../../main_assets/backgrounds/background-fantasy.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: fixed;
 }
 
 .past-match {
-  display: grid;
+	display: grid;
 }
 
 .fantasy-sub-container {
-  display: grid;
-  grid-template-rows: 125px minmax(400px, 68vh);
+	display: grid;
+	grid-template-rows: 125px minmax(400px, 68vh);
 }
 
 .coming-match {
-  display: grid;
+	display: grid;
 }
 
 .my-team {
-  display: grid;
+	display: grid;
 }
 
 .details {
-  display: grid;
-  background-color: lightblue;
+	display: grid;
+	background-color: lightblue;
 }
 
 .leaderboard-button {
-  margin: 20px;
-  margin-bottom: 0px;
-  background-color: rgba(67, 72, 76, 0.7);
-  transition-duration: 0.5s;
-  color: white;
+	margin: 20px;
+	margin-bottom: 0px;
+	background-color: rgba(67, 72, 76, 0.7);
+	transition-duration: 0.5s;
+	color: white;
 }
 
 .leaderboard-button h2 {
-  padding: 20px;
+	padding: 20px;
+}
+
+.pinfo-super-container {
+	background-image: url('../../main_assets/backgrounds/ana.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: 100%;
+	min-height: 100vh;
 }

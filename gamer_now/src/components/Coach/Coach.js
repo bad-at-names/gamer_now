@@ -93,7 +93,7 @@ class Coach extends Component {
 				}
 			})
 		) : (
-			<h2>Loading ...</h2>
+			<h2>No Results Found</h2>
 		);
 		return (
 			<div className="coach-container">

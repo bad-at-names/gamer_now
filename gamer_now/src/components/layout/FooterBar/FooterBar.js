@@ -1,10 +1,10 @@
-import React /* , {Component} */ from "react";
-import { Link } from "react-router-dom";
-import firebase from "firebase";
-import "./FooterBar.css";
-import { connect } from "react-redux";
-import SignedIn from "./SignedIn";
-import SignedOut from "./SignedOut";
+import React /* , {Component} */ from 'react';
+import { Link } from 'react-router-dom';
+import firebase from 'firebase';
+import './FooterBar.css';
+import { connect } from 'react-redux';
+import SignedIn from './SignedIn';
+import SignedOut from './SignedOut';
 
 /* class FooterBar extends Component {
     render() {
@@ -22,22 +22,15 @@ import SignedOut from "./SignedOut";
 } */
 
 const FooterBar = props => {
-  const { auth } = props;
-  const links = auth.uid ? (
-    <span>
-      {auth.email}
-      <SignedIn />
-    </span>
-  ) : (
-    <SignedOut />
-  );
-  return <div id="footerbar">{links}</div>;
+	const { auth } = props;
+	const links = auth.uid ? <SignedIn /> : <SignedOut />;
+	return <div id="footerbar">{links}</div>;
 };
 
 const mapStateToProps = state => {
-  return {
-    auth: state.firebase.auth
-  };
+	return {
+		auth: state.firebase.auth
+	};
 };
 
 export default connect(mapStateToProps)(FooterBar);
