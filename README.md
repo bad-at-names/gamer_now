@@ -72,9 +72,8 @@ A common way to update is by doing
 # Fantasy league
 - Allow users to create leagues that other users can join
 - Allow users can join password protected leagues
-- Allow users to charge an ante to create prizes for winners
 - Allow users to pick their favorite players
-- Allow users to see how players perform over time (graphs)
+
 
 # Coaching forum
 - Allow users to create posts
@@ -82,12 +81,9 @@ A common way to update is by doing
 - Allow coach replies to be highlighted in some way
 
  #  1 on 1 coaching
- - Allow users to apply to coach and set their rate
-- Require applicants to verify their in-game rank
-- Allow users to rate their experience with that coach
-- Allow user to book a time for coaching
+- Allow users to apply to coach and set their rate
+- Allow user to book a time for coaching 
 - Allow coaches to write a biography to sell their service
-- Allow coaches to set availability
 ## Languages & tools
 ### JavaScript
 
