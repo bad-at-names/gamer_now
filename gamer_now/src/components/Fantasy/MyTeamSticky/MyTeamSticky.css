@@ -1,22 +1,29 @@
 .my-team-sticky-container {
-  margin: 20px;
-  margin-bottom: 0px;
-  background-color: rgba(67, 72, 76, 0.7);
-  transition-duration: 0.5s;
-  position: sticky;
-  top: 50px;
-  z-index: 1000;
+	margin: 20px;
+	margin-bottom: 0px;
+	background-color: rgba(67, 72, 76, 0.7);
+	transition-duration: 0.5s;
+	position: sticky;
+	top: 50px;
+	z-index: 1000;
 }
 
 .my-team-container:hover {
-  background-color: rgba(67, 72, 76, 0.9);
+	background-color: rgba(67, 72, 76, 0.9);
 }
 
 .player-slot {
-  height: 100px;
+	height: 100px;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
+}
+
+.back-button {
+	background-color: #b1b6a6;
+	padding: 10px;
+	border-radius: 15px;
+	margin: 20px;
 }

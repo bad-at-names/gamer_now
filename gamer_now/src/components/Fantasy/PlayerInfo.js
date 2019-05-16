@@ -35,7 +35,6 @@ class PlayerInfo extends Component {
 		return (
 			<div className="pinfo-super-container">
 				<MyTeamSticky />
-				<Link to="./fantasy">Back</Link>
 				<div className="card-table">{playerList}</div>
 			</div>
 		);

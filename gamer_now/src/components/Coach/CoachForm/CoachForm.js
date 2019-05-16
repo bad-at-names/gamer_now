@@ -91,102 +91,104 @@ class CoachForm extends Component {
 	render() {
 		if (!this.state.success) {
 			return (
-				<div className="coach-form-super-container">
-					<form className="coach-form-container" onSubmit={this.handleSubmit}>
-						<div>
-							<input
-								type="text"
-								name=""
-								id="email"
-								className="cred-inputs"
-								placeholder="Email"
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div>
-							<input
-								type="password"
-								name=""
-								id="password"
-								className="cred-inputs"
-								placeholder="Password"
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div>
-							${'   '}
-							<input
-								type="number"
-								name=""
-								id="rate"
-								className="rate-input"
-								placeholder="Rate"
-								onChange={this.handleChange}
-								required
-							/>
-							{'  '}
-							/hr
-						</div>
-						<div>
-							<textarea
-								name=""
-								id="dscrptn"
-								className="dsc-inputs"
-								placeholder="Description"
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div />
-						<div className="check-game">
-							<label className="game-label" htmlFor="dota">
+				<div className="cs-container">
+					<div className="coach-form-super-container">
+						<form className="coach-form-container" onSubmit={this.handleSubmit}>
+							<div>
 								<input
-									type="radio"
-									value="dota"
-									name="game"
-									id="dota"
-									label="dota"
-									onChange={this.handleCheck}
-									className="game"
+									type="text"
+									name=""
+									id="email"
+									className="cred-inputs"
+									placeholder="Email"
+									onChange={this.handleChange}
+									required
 								/>
-								<img src={G0} className="game-image" alt="" />
-							</label>
-							<label className="game-label" htmlFor="overwatch">
+							</div>
+							<div>
 								<input
-									type="radio"
-									value="overwatch"
-									name="game"
-									id="overwatch"
-									label="overwatch"
-									onChange={this.handleCheck}
-									className="game"
+									type="password"
+									name=""
+									id="password"
+									className="cred-inputs"
+									placeholder="Password"
+									onChange={this.handleChange}
+									required
 								/>
-								<img src={G1} className="game-image1" alt="" />
-							</label>
-							<label className="game-label" htmlFor="csgo">
+							</div>
+							<div>
+								${'   '}
 								<input
-									type="radio"
-									value="csgo"
-									name="game"
-									id="csgo"
-									label="csgo"
-									onChange={this.handleCheck}
-									className="game"
+									type="number"
+									name=""
+									id="rate"
+									className="rate-input"
+									placeholder="Rate"
+									onChange={this.handleChange}
+									required
 								/>
-								<img src={G2} className="game-image1" alt="" />
-							</label>
-						</div>
-						<div>
-							<a href="https://connect.stripe.com/oauth/authorize?response_type=code&amp;client_id=ca_E3knZAX3KUUPTvamrcELICFtqgGeY20q&amp;scope=read_write">
-								<span>Connect with Stripe</span>
-							</a>
-						</div>
-						<div>
-							<button className="coach-form-button">Become a Coach</button>
-						</div>
-					</form>
+								{'  '}
+								/hr
+							</div>
+							<div>
+								<textarea
+									name=""
+									id="dscrptn"
+									className="dsc-inputs"
+									placeholder="Description"
+									onChange={this.handleChange}
+									required
+								/>
+							</div>
+							<div />
+							<div className="check-game">
+								<label className="game-label" htmlFor="dota">
+									<input
+										type="radio"
+										value="dota"
+										name="game"
+										id="dota"
+										label="dota"
+										onChange={this.handleCheck}
+										className="game"
+									/>
+									<img src={G0} className="game-image" alt="" />
+								</label>
+								<label className="game-label" htmlFor="overwatch">
+									<input
+										type="radio"
+										value="overwatch"
+										name="game"
+										id="overwatch"
+										label="overwatch"
+										onChange={this.handleCheck}
+										className="game"
+									/>
+									<img src={G1} className="game-image1" alt="" />
+								</label>
+								<label className="game-label" htmlFor="csgo">
+									<input
+										type="radio"
+										value="csgo"
+										name="game"
+										id="csgo"
+										label="csgo"
+										onChange={this.handleCheck}
+										className="game"
+									/>
+									<img src={G2} className="game-image1" alt="" />
+								</label>
+							</div>
+							<div>
+								<a href="https://connect.stripe.com/oauth/authorize?response_type=code&amp;client_id=ca_E3knZAX3KUUPTvamrcELICFtqgGeY20q&amp;scope=read_write">
+									<span>Connect with Stripe</span>
+								</a>
+							</div>
+							<div>
+								<button className="coach-form-button">Become a Coach</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			);
 		} else {

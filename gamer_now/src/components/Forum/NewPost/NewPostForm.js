@@ -78,56 +78,58 @@ class NewPostForm extends Component {
 		}
 		if (!this.state.success && user) {
 			return (
-				<div className="coach-form-super-container">
-					<form className="coach-form-container" onSubmit={this.handleSubmit}>
-						<div>
-							<input
-								type="text"
-								name=""
-								id="title"
-								className="cred-inputs"
-								placeholder="Title"
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
+				<div className="cf-super-container">
+					<div className="coach-form-super-container">
+						<form className="coach-form-container" onSubmit={this.handleSubmit}>
+							<div>
+								<input
+									type="text"
+									name=""
+									id="title"
+									className="cred-inputs"
+									placeholder="Title"
+									onChange={this.handleChange}
+									required
+								/>
+							</div>
 
-						<div>
-							<textarea
-								name=""
-								id="question"
-								className="dsc-inputs"
-								placeholder="question"
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div>
-							<input
-								type="text"
-								name=""
-								id="username"
-								className="cred-inputs"
-								placeholder="Username"
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div>
-							<input
-								type="password"
-								name=""
-								id="password"
-								className="cred-inputs"
-								placeholder="Password"
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div>
-							<button className="coach-form-button">Post</button>
-						</div>
-					</form>
+							<div>
+								<textarea
+									name=""
+									id="question"
+									className="dsc-inputs"
+									placeholder="question"
+									onChange={this.handleChange}
+									required
+								/>
+							</div>
+							<div>
+								<input
+									type="text"
+									name=""
+									id="username"
+									className="cred-inputs"
+									placeholder="Username"
+									onChange={this.handleChange}
+									required
+								/>
+							</div>
+							<div>
+								<input
+									type="password"
+									name=""
+									id="password"
+									className="cred-inputs"
+									placeholder="Password"
+									onChange={this.handleChange}
+									required
+								/>
+							</div>
+							<div>
+								<button className="coach-form-button">Post</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			);
 		} else {

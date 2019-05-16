@@ -93,3 +93,11 @@
 	opacity: 0.7;
 	height: 80x;
 }
+
+.cf-super-container {
+	background-image: url('../../main_assets/backgrounds/bastion.jpg');
+	min-height: 100vh;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
