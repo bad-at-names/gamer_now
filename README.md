@@ -1,4 +1,7 @@
 # GamerNow
+
+View the website now at https://gamer-now.firebaseapp.com/
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
